@@ -180,46 +180,134 @@
 <h2 id="下单生成二维码接口"><a href="#下单生成二维码接口" class="headerlink" title="下单生成二维码接口"></a>下单生成二维码接口</h2><table>
 <thead>
 <tr>
-<th>参数</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">默认值</th>
+<th>字段名</th>
+<th>变量名</th>
+<th>必填</th>
+<th>类型</th>
+<th>示例值</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>host</td>
-<td style="text-align:center">远程主机的地址</td>
-<td style="text-align:center"></td>
+<td>渠道号</td>
+<td>channelId</td>
+<td>是</td>
+<td>String</td>
+<td>1000</td>
+<td></td>
 </tr>
 <tr>
-<td>user</td>
-<td style="text-align:center">使用者名称</td>
-<td style="text-align:center"></td>
+<td>门店编号</td>
+<td>storeNo</td>
+<td>是</td>
+<td>String</td>
+<td>100085</td>
+<td></td>
 </tr>
 <tr>
-<td>root</td>
-<td style="text-align:center">远程主机的根目录</td>
-<td style="text-align:center"></td>
+<td>设备编号</td>
+<td>posNo</td>
+<td>是</td>
+<td>String</td>
+<td>100</td>
+<td></td>
 </tr>
 <tr>
-<td>port</td>
-<td style="text-align:center">端口</td>
-<td style="text-align:center">22</td>
+<td>收银员编号</td>
+<td>cashierNo</td>
+<td>否</td>
+<td>String</td>
+<td>02</td>
+<td></td>
 </tr>
 <tr>
-<td>delete</td>
-<td style="text-align:center">删除远程主机上的旧文件</td>
-<td style="text-align:center">true</td>
+<td>许可列号</td>
+<td>serierNo</td>
+<td>否</td>
+<td>String</td>
+<td>fe2323df999</td>
+<td>动态码请忽略</td>
 </tr>
 <tr>
-<td>verbose</td>
-<td style="text-align:center">显示调试信息</td>
-<td style="text-align:center">true</td>
+<td>用户ID</td>
+<td>openId</td>
+<td>否</td>
+<td>String</td>
+<td>oG3werwerwer1221</td>
+<td>动态码请忽略</td>
 </tr>
 <tr>
-<td>ignore_errors</td>
-<td style="text-align:center">忽略错误</td>
-<td style="text-align:center">false</td>
+<td>接入商订单号</td>
+<td>orderNo</td>
+<td>否</td>
+<td>String</td>
+<td>1290012</td>
+<td>接入商不传，默认平台订单号</td>
+</tr>
+<tr>
+<td>订单金额</td>
+<td>amount</td>
+<td>是</td>
+<td>int</td>
+<td>12</td>
+<td>单位（分）</td>
+</tr>
+<tr>
+<td>订单时间</td>
+<td>beginTime</td>
+<td>是</td>
+<td>String</td>
+<td>20180504123546</td>
+<td>yyyyMMddHHmmss</td>
+</tr>
+<tr>
+<td>支付类型</td>
+<td>payType</td>
+<td>是</td>
+<td>String</td>
+<td>WX_NATIVE</td>
+<td>WX_NATIVE(微信）,ALI_NATIVE（支付宝）</td>
+</tr>
+<tr>
+<td>IP地址</td>
+<td>ip</td>
+<td>是</td>
+<td>String</td>
+<td>127.0.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td>币种</td>
+<td>currency</td>
+<td>否</td>
+<td>String</td>
+<td>CNY</td>
+<td></td>
+</tr>
+<tr>
+<td>商品详情</td>
+<td>goodsDetail</td>
+<td>否</td>
+<td>String</td>
+<td></td>
+<td>[{“goodsId”:”id0”,”goodsName”:”iname”,”price”:3,”quantity”:2},{“goodsId”:”id1”,”goodsName”:”iname”,”price”:3,”quantity”:2}]</td>
+</tr>
+<tr>
+<td>备注</td>
+<td>comment</td>
+<td>否</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>签名</td>
+<td>sign</td>
+<td>是</td>
+<td>String</td>
+<td></td>
+<td>非空参数按ASCII 排序，末尾增加明付平台分配的KEY</td>
 </tr>
 </tbody>
 </table>
