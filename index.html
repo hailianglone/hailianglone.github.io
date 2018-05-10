@@ -1,547 +1,1494 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<!-- Head tag -->
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="武阳在 Github 上的个人博客">
-    <meta name="keyword" content="">
-    <meta name="theme-color" content="#600090">
-    <meta name="msapplication-navbutton-color" content="#600090">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
-    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
-    <link rel="alternate" type="application/atom+xml" title="武阳" href="/atom.xml">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
-    <title>
-        
-        武阳的博客
-        
-    </title>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
-    <link rel="canonical" href="http://hailianglone.github.io/">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/blog-style.css">
 
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="这可能是最简单的表达方式">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="yuheng&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="yuheng&#39;s Blog">
+<meta property="og:description" content="这可能是最简单的表达方式">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yuheng&#39;s Blog">
+<meta name="twitter:description" content="这可能是最简单的表达方式">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>yuheng's Blog</title>
+  
+
+
+
+
+
+
+
+
 </head>
 
-<style>
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
-    header.intro-header {
-        background-image: url('//o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg')
-    }
-</style>
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="" class="animated fadeIn">
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
-" data-ishome = "true" >
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/">
-                <span class="brand-logo">
-                    武阳
-                </span>
-                's Blog
-            </a>
-        </div>
+  
+  
+    
+  
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-					
-                    
-					
-					
-                </ul>
-            </div>
-        </div>
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">yuheng's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    <!-- /.container -->
+      
+        <p class="site-subtitle">大道至简</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-<!-- Main Content -->
-
-
-<style>
-
-    .custom-haojen-container .post-preview:nth-of-type(1),
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
-        text-align: center;
-        background-repeat: no-repeat;
-        border-radius: 3px;
-        background-size: cover;
-        padding: 0;
-        height: 300px;
-        display: table;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.16);
-    }
-
-    /*去掉诗歌的背景图片*/
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
-        background-image: none !important;
-        background-color: rgba(255, 248, 220, 0.5);
-    }
-
-    .custom-haojen-container .post-preview:nth-child(1) h2,
-    .custom-haojen-container .post-preview:nth-child(1) .post-meta,
-    .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-        text-shadow: 0 0 40px rgba(0, 0, 0, 1);
-        letter-spacing: 1px;
-        color: #fff;
-        margin-top: 0;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-
-    .custom-haojen-container .post-preview:nth-child(1) .post-meta {
-        font-size: .9em;
-        font-weight: 300;
-        margin-top: 0;
-    }
-
-    .custom-haojen-container .post-preview-poetry:nth-child(1) .post-subtitle {
-        letter-spacing: 6px;
-        font-size: 18px;
-        font-family: unset;
-        font-weight: 400;
-        color: rgba(0, 0, 0, .75)
-    }
-
-    /*不显示摘要*/
-    .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
-        display: none
-    }
-
-    /*只第一个显示背景图片*/
-    .custom-haojen-container .post-preview:not(:nth-child(1)) {
-        background-image: none !important;
-    }
-
-    /*第一个分界线去掉*/
-    .custom-haojen-container hr:nth-of-type(1) {
-        display: none;
-    }
-
-    /*主题*/
-    .custom-haojen-container .post-preview:nth-of-type(1) > a {
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    /*诗词标题*/
-    .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-        font-size: 35px;
-        font-family: STKaiti;
-        color: rgba(0, 0, 0, .8);
-    }
-
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
-        color: #0e2231;
-    }
-
-    @media (max-width: 768px) {
-        .custom-haojen-container .post-preview:nth-child(1) {
-            height: 240px;
-        }
-
-        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-            font-size: 28px !important;
-            margin-top: 0;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-            font-size: 18px;
-            font-weight: 400;
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .custom-haojen-container .post-preview:nth-of-type(1) > a {
-            padding: 20px
-        }
-    }
-
-    /*手机屏幕*/
-    @media (max-width: 400px) {
-        .custom-haojen-container .post-preview:nth-child(1) {
-            height: 195px;
-        }
-
-        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-            font-size: 20px !important;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-            font-size: 16px;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) a {
-            padding: 30px 20px;
-        }
-    }
-</style>
-
-<!-- Page Header -->
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
-    <div class="row">
-        <header class="intro-header">
-            <div class="container">
-                <div class="site-heading text-center">
-                    <div class="about-me">
-                        <!--移动端头部显示-->
-                        <img src=""/>
-                        <h5><a href="/about/">武阳</a></h5>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </div>
-</div>
-<!-- Main Content -->
-<div class="container custom-haojen-container">
-    <!-- Post Container -->
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
-            <!-- Main Content -->
 
 
 
-<div class="post-preview "
-     style="background-image: url('')">
-    <a href="/2018/05/09/动态码支付/">
-        <h2 class="post-title">
-            动态码支付
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-05-09
-        </p>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/09/动态码支付/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彧衡">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yuheng's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-        <div class="post-content-preview">
-            <p>
-                动态码支付动态码支付，是渠道商根据用户订单生成对应支付二维码，用户打开支付宝或者微信扫一扫功能，进行扫码支付。渠道接入商接入流程： 
-
-明付平台分配给渠道商，对应的渠道号，虚拟门店号，款台号（门店号，款台号根据接入商对账要求和接入商一起定义规则） 
-
-接入商调用明付平台【下单】接口，取得对应支付..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('')">
-    <a href="/2018/05/09/hello-world/">
-        <h2 class="post-title">
-            Hello World
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-05-09
-        </p>
         
-        <div class="post-content-preview">
-            <p>
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer i..
-            </p>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/09/动态码支付/" itemprop="url">动态码支付</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-09T23:44:13+08:00">
+                2018-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-    </a>
+      </header>
+    
 
-</div>
-
-<hr>
-
-
-
-
-<!-- 翻页 pager -->
-
-<ul class="pager">
     
     
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="动态码支付"><a href="#动态码支付" class="headerlink" title="动态码支付"></a>动态码支付</h1><p>动态码支付，是渠道商根据用户订单生成对应支付二维码，用户打开支付宝或者微信扫一扫功能，进行扫码支付。<br>渠道接入商接入流程： </p>
+<ul>
+<li><p>明付平台分配给渠道商，对应的渠道号，虚拟门店号，款台号（门店号，款台号根据接入商对账要求和接入商一起定义规则） </p>
+</li>
+<li><p>接入商调用明付平台【下单】接口，取得对应支付二维码链接和对应平台订单号 </p>
+</li>
+<li><p>接入商同时发起轮询【查询】接口，轮询间隔3~5,轮询5次，如果仍然没有收到支付确认，请重新【下单】刷新二维码，并提示用户重新扫码支付 </p>
+</li>
+<li><p>如果接入商有退款需求，可根据平台订单号进行【退款】操作 </p>
+</li>
 </ul>
+<p><strong>注意</strong> 暂时不支持支付通知处理 </p>
+<h2 id="下单生成二维码接口"><a href="#下单生成二维码接口" class="headerlink" title="下单生成二维码接口"></a>下单生成二维码接口</h2><ul>
+<li><p>接口地址： 沙箱：<a href="https://realer.cn/api/payService/{version}/unifiedOrder" target="_blank" rel="noopener">https://realer.cn/api/payService/{version}/unifiedOrder</a><br>  默认版本号 1.0</p>
+</li>
+<li><p>参数列表 </p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>变量名</th>
+<th>必填</th>
+<th>类型</th>
+<th>示例值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>渠道号</td>
+<td>channelId</td>
+<td>是</td>
+<td>String</td>
+<td>1000</td>
+<td></td>
+</tr>
+<tr>
+<td>门店编号</td>
+<td>storeNo</td>
+<td>是</td>
+<td>String</td>
+<td>100085</td>
+<td></td>
+</tr>
+<tr>
+<td>设备编号</td>
+<td>posNo</td>
+<td>是</td>
+<td>String</td>
+<td>100</td>
+<td></td>
+</tr>
+<tr>
+<td>收银员编号</td>
+<td>cashierNo</td>
+<td>否</td>
+<td>String</td>
+<td>02</td>
+<td></td>
+</tr>
+<tr>
+<td>许可列号</td>
+<td>serierNo</td>
+<td>否</td>
+<td>String</td>
+<td>fe2323df999</td>
+<td>动态码请忽略</td>
+</tr>
+<tr>
+<td>用户ID</td>
+<td>openId</td>
+<td>否</td>
+<td>String</td>
+<td>oG3werwerwer1221</td>
+<td>动态码请忽略</td>
+</tr>
+<tr>
+<td>接入商订单号</td>
+<td>orderNo</td>
+<td>否</td>
+<td>String</td>
+<td>1290012</td>
+<td>接入商不传，默认平台订单号</td>
+</tr>
+<tr>
+<td>订单金额</td>
+<td>amount</td>
+<td>是</td>
+<td>int</td>
+<td>12</td>
+<td>单位（分）</td>
+</tr>
+<tr>
+<td>订单时间</td>
+<td>beginTime</td>
+<td>是</td>
+<td>String</td>
+<td>20180504123546</td>
+<td>yyyyMMddHHmmss</td>
+</tr>
+<tr>
+<td>支付类型</td>
+<td>payType</td>
+<td>是</td>
+<td>String</td>
+<td>WX_NATIVE</td>
+<td>WX_NATIVE(微信）,ALI_NATIVE（支付宝）</td>
+</tr>
+<tr>
+<td>IP地址</td>
+<td>ip</td>
+<td>是</td>
+<td>String</td>
+<td>127.0.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td>币种</td>
+<td>currency</td>
+<td>否</td>
+<td>String</td>
+<td>CNY</td>
+<td></td>
+</tr>
+<tr>
+<td>商品详情</td>
+<td>goodsDetail</td>
+<td>否</td>
+<td>String</td>
+<td></td>
+<td>[{“goodsId”:”id0”,”goodsName”:”iname”,”price”:3,”quantity”:2},{“goodsId”:”id1”,”goodsName”:”iname”,”price”:3,”quantity”:2}]</td>
+</tr>
+<tr>
+<td>备注</td>
+<td>comment</td>
+<td>否</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>签名</td>
+<td>sign</td>
+<td>是</td>
+<td>String</td>
+<td></td>
+<td>非空参数按ASCII 排序，末尾增加明付平台分配的KEY</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回结果  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>变量名</th>
+<th>必填</th>
+<th>类型</th>
+<th>示例值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>应用ID</td>
+<td>appId</td>
+<td>否</td>
+<td>String</td>
+<td>wxd678efh567hg6787</td>
+<td></td>
+</tr>
+<tr>
+<td>时间戳</td>
+<td>timeStamp</td>
+<td>否</td>
+<td>String</td>
+<td>20180504123546</td>
+<td></td>
+</tr>
+<tr>
+<td>随机串</td>
+<td>nonceStr</td>
+<td>否</td>
+<td>String</td>
+<td>wxd678efh567hg6787fsdfsd2</td>
+<td>随机串</td>
+</tr>
+<tr>
+<td>数据包</td>
+<td>package</td>
+<td>否</td>
+<td>String</td>
+<td>prepay_id=wx2017033010242291fcfe0db70013231072</td>
+<td>统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=wx2017033010242291fcfe0db70013231072</td>
+</tr>
+<tr>
+<td>签名方式</td>
+<td>signType</td>
+<td>否</td>
+<td>String</td>
+<td>MD5</td>
+<td>签名类型，默认为MD5，支持HMAC-SHA256和MD5。注意此处需与统一下单的签名类型一致</td>
+</tr>
+<tr>
+<td>签名</td>
+<td>paySign</td>
+<td>否</td>
+<td>String</td>
+<td>oG3werwerwer1221</td>
+<td></td>
+</tr>
+<tr>
+<td>明付平台订单号</td>
+<td>tradeNo</td>
+<td>是</td>
+<td>String</td>
+<td>P98212781821288121</td>
+<td></td>
+</tr>
+<tr>
+<td>第三方平台订单</td>
+<td>outTradeNo</td>
+<td>否</td>
+<td>String</td>
+<td>4001220181230456245</td>
+<td></td>
+</tr>
+<tr>
+<td>二维码URL</td>
+<td>codeUrl</td>
+<td>是</td>
+<td>String</td>
+<td>weixin://123.12121</td>
+<td><strong>动态码关注字段</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="订单查询接口"><a href="#订单查询接口" class="headerlink" title="订单查询接口"></a>订单查询接口</h2><p>仅仅支持明付订单号查询 </p>
+<ul>
+<li><p>接口地址： 沙箱： <a href="https://realer.cn/api/payService/{version}/tradePayQuery" target="_blank" rel="noopener">https://realer.cn/api/payService/{version}/tradePayQuery</a><br>  默认版本号 1.0 </p>
+</li>
+<li><p>参数列表 </p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>变量名</th>
+<th>必填</th>
+<th>类型</th>
+<th>示例值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>渠道号</td>
+<td>channelId</td>
+<td>是</td>
+<td>String</td>
+<td>1000</td>
+<td></td>
+</tr>
+<tr>
+<td>门店编号</td>
+<td>storeNo</td>
+<td>是</td>
+<td>String</td>
+<td>100085</td>
+<td></td>
+</tr>
+<tr>
+<td>设备编号</td>
+<td>posNo</td>
+<td>是</td>
+<td>String</td>
+<td>100</td>
+<td>动态码设备列表区间100~119</td>
+</tr>
+<tr>
+<td>收银员编号</td>
+<td>cashierNo</td>
+<td>否</td>
+<td>String</td>
+<td>02</td>
+<td></td>
+</tr>
+<tr>
+<td>许可列号</td>
+<td>serierNo</td>
+<td>否</td>
+<td>String</td>
+<td>fe2323df999</td>
+<td>动态码请忽略</td>
+</tr>
+<tr>
+<td>接入商订单号</td>
+<td>orderNo</td>
+<td>否</td>
+<td>String</td>
+<td>oG3werwerwer1221</td>
+<td></td>
+</tr>
+<tr>
+<td>明付商户订单号</td>
+<td>tradeNo</td>
+<td>是</td>
+<td>String</td>
+<td>1290012</td>
+<td>orderNo ,tradeNo 二选一，优先tradeNo</td>
+</tr>
+<tr>
+<td>支付类型</td>
+<td>payType</td>
+<td>否</td>
+<td>String</td>
+<td>WX_NATIVE</td>
+<td>WX_NATIVE(微信）,ALI_NATIVE（支付宝）</td>
+</tr>
+<tr>
+<td>IP地址</td>
+<td>ip</td>
+<td>是</td>
+<td>String</td>
+<td>127.0.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td>备注</td>
+<td>comment</td>
+<td>否</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>签名</td>
+<td>sign</td>
+<td>是</td>
+<td>String</td>
+<td></td>
+<td>非空参数按ASCII 排序，末尾增加明付平台分配的KEY</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回结果 </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>变量名</th>
+<th>必填</th>
+<th>类型</th>
+<th>示例值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原单支付金额</td>
+<td>oriPayMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>单位（分），只有查询退款时，该值才有意义</td>
+</tr>
+<tr>
+<td>退款时，原单剩余可退金额</td>
+<td>oriSurplusMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>单位（分），只有查询退款时，该值才有意义</td>
+</tr>
+<tr>
+<td>退款时 ，原单接入商订单号</td>
+<td>oriOrderNo</td>
+<td>否</td>
+<td>String</td>
+<td>201804211320</td>
+<td></td>
+</tr>
+<tr>
+<td>退款时，原单明付平台流水号</td>
+<td>oriTradeSerial</td>
+<td>否</td>
+<td>String</td>
+<td>P901283232343434</td>
+<td></td>
+</tr>
+<tr>
+<td>退款时，原单三方平台流水号</td>
+<td>oriThirdTradeNo</td>
+<td>否</td>
+<td>String</td>
+<td>40092182888812121</td>
+<td></td>
+</tr>
+<tr>
+<td>总支付金额</td>
+<td>needPayMoney</td>
+<td>是</td>
+<td>int</td>
+<td>1000</td>
+<td>终端发起的待付金额  needPayMoney=payMoney+thirdDiscountMoney+discountMoney+merchantDiscountMoney</td>
+</tr>
+<tr>
+<td>用户支付金额</td>
+<td>payMoney</td>
+<td>是</td>
+<td>int</td>
+<td>1000</td>
+<td>用户支付金额</td>
+</tr>
+<tr>
+<td>第三方优惠金额</td>
+<td>thirdDiscountMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>第三方优惠金额</td>
+</tr>
+<tr>
+<td>明付平台优惠金额</td>
+<td>discountMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>明付平台优惠金额</td>
+</tr>
+<tr>
+<td>接入商优惠金额</td>
+<td>merchantDiscountMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>暂不支持</td>
+</tr>
+<tr>
+<td>交易时间</td>
+<td>tradeTime</td>
+<td>是</td>
+<td>String</td>
+<td>20180504123546</td>
+<td>yyyyMMddHHmmss</td>
+</tr>
+<tr>
+<td>接入商订单号</td>
+<td>orderNo</td>
+<td>否</td>
+<td>String</td>
+<td>201804211320</td>
+<td></td>
+</tr>
+<tr>
+<td>明付平台流水号</td>
+<td>tradeSerial</td>
+<td>否</td>
+<td>String</td>
+<td>P901283232343434</td>
+<td></td>
+</tr>
+<tr>
+<td>三方平台流水号</td>
+<td>thirdTradeNo</td>
+<td>否</td>
+<td>String</td>
+<td>40092182888812121</td>
+</tr>
+</tbody>
+</table>
+<h2 id="订单退款接口"><a href="#订单退款接口" class="headerlink" title="订单退款接口"></a>订单退款接口</h2><ul>
+<li><p>接口地址： 沙箱： <a href="https://realer.cn/api/payService/{version}/refundment" target="_blank" rel="noopener">https://realer.cn/api/payService/{version}/refundment</a><br>   默认版本号 1.0 ，退货要求必须传refundNo,因为可以一票多退，防止重退，该字段接入商户必须保证唯一。参考生成规则orderNo-上笔退款平台订单号</p>
+</li>
+<li><p>参数列表 </p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>变量名</th>
+<th>必填</th>
+<th>类型</th>
+<th>示例值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>渠道号</td>
+<td>channelId</td>
+<td>是</td>
+<td>String</td>
+<td>1000</td>
+<td></td>
+</tr>
+<tr>
+<td>门店编号</td>
+<td>storeNo</td>
+<td>是</td>
+<td>String</td>
+<td>100085</td>
+<td></td>
+</tr>
+<tr>
+<td>设备编号</td>
+<td>posNo</td>
+<td>是</td>
+<td>String</td>
+<td>100</td>
+<td>动态码设备列表区间100~119</td>
+</tr>
+<tr>
+<td>收银员编号</td>
+<td>cashierNo</td>
+<td>否</td>
+<td>String</td>
+<td>02</td>
+<td></td>
+</tr>
+<tr>
+<td>许可列号</td>
+<td>serierNo</td>
+<td>否</td>
+<td>String</td>
+<td>fe2323df999</td>
+<td>动态码请忽略</td>
+</tr>
+<tr>
+<td>退款金额</td>
+<td>amount</td>
+<td>是</td>
+<td>int</td>
+<td>12</td>
+<td>单位（分）</td>
+</tr>
+<tr>
+<td>接入商原订单号</td>
+<td>oriOrderNo</td>
+<td>否</td>
+<td>String</td>
+<td>201804211320</td>
+<td></td>
+</tr>
+<tr>
+<td>接入商退款订单号</td>
+<td>orderNo</td>
+<td>否</td>
+<td>String</td>
+<td>201804211320</td>
+<td>接入商不传，默认平台退单号</td>
+</tr>
+<tr>
+<td>接入商退款唯一订单号</td>
+<td>refundNo</td>
+<td>是</td>
+<td>String</td>
+<td>1712010027-P03936456117297483776</td>
+<td>接入商唯一，退单号</td>
+</tr>
+<tr>
+<td>明付商户原订单号</td>
+<td>TradeNo</td>
+<td>是</td>
+<td>String</td>
+<td>P982127777712</td>
+<td>oriOrderNo ,oriTradeNo 二选一，oriTradeNo</td>
+</tr>
+<tr>
+<td>支付类型</td>
+<td>payType</td>
+<td>否</td>
+<td>String</td>
+<td>WX_NATIVE</td>
+<td>WX_NATIVE(微信）,ALI_NATIVE（支付宝）</td>
+</tr>
+<tr>
+<td>退货商品详情</td>
+<td>goodsDetail</td>
+<td>否</td>
+<td>String</td>
+<td></td>
+<td>[{“goodsId”:”id0”,”goodsName”:”iname”,”price”:3,”quantity”:2},{“goodsId”:”id1”,”goodsName”:”iname”,”price”:3,”quantity”:2}]</td>
+</tr>
+<tr>
+<td>退单时间</td>
+<td>beginTime</td>
+<td>是</td>
+<td>String</td>
+<td>20180504123546</td>
+<td>yyyyMMddHHmmss</td>
+</tr>
+<tr>
+<td>IP地址</td>
+<td>ip</td>
+<td>是</td>
+<td>String</td>
+<td>127.0.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td>备注</td>
+<td>comment</td>
+<td>否</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>签名</td>
+<td>sign</td>
+<td>是</td>
+<td>String</td>
+<td></td>
+<td>非空参数按ASCII 排序，末尾增加明付平台分配的KEY</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回结果 </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>变量名</th>
+<th>必填</th>
+<th>类型</th>
+<th>示例值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原单支付金额</td>
+<td>oriPayMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>单位（分），只有查询退款时，该值才有意义</td>
+</tr>
+<tr>
+<td>退款时，原单剩余可退金额</td>
+<td>oriSurplusMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>单位（分），只有查询退款时，该值才有意义</td>
+</tr>
+<tr>
+<td>退款时 ，原单接入商订单号</td>
+<td>oriOrderNo</td>
+<td>否</td>
+<td>String</td>
+<td>201804211320</td>
+<td></td>
+</tr>
+<tr>
+<td>退款时，原单明付平台流水号</td>
+<td>oriTradeSerial</td>
+<td>否</td>
+<td>String</td>
+<td>P901283232343434</td>
+<td></td>
+</tr>
+<tr>
+<td>退款时，原单三方平台流水号</td>
+<td>oriThirdTradeNo</td>
+<td>否</td>
+<td>String</td>
+<td>40092182888812121</td>
+<td></td>
+</tr>
+<tr>
+<td>总支付金额</td>
+<td>needPayMoney</td>
+<td>是</td>
+<td>int</td>
+<td>1000</td>
+<td>终端发起的待付金额  needPayMoney=payMoney+thirdDiscountMoney+discountMoney+merchantDiscountMoney</td>
+</tr>
+<tr>
+<td>用户支付金额</td>
+<td>payMoney</td>
+<td>是</td>
+<td>int</td>
+<td>1000</td>
+<td>用户支付金额</td>
+</tr>
+<tr>
+<td>第三方优惠金额</td>
+<td>thirdDiscountMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>第三方优惠金额</td>
+</tr>
+<tr>
+<td>明付平台优惠金额</td>
+<td>discountMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>明付平台优惠金额</td>
+</tr>
+<tr>
+<td>接入商优惠金额</td>
+<td>merchantDiscountMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>暂不支持</td>
+</tr>
+<tr>
+<td>交易时间</td>
+<td>tradeTime</td>
+<td>是</td>
+<td>String</td>
+<td>20180504123546</td>
+<td>yyyyMMddHHmmss</td>
+</tr>
+<tr>
+<td>接入商订单号</td>
+<td>orderNo</td>
+<td>否</td>
+<td>String</td>
+<td>201804211320</td>
+<td></td>
+</tr>
+<tr>
+<td>明付平台流水号</td>
+<td>tradeSerial</td>
+<td>否</td>
+<td>String</td>
+<td>P901283232343434</td>
+<td></td>
+</tr>
+<tr>
+<td>三方平台流水号</td>
+<td>thirdTradeNo</td>
+<td>否</td>
+<td>String</td>
+<td>40092182888812121</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
-
-        </div>
-        <!-- Sidebar Container -->
-        <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-
-            <!-- About Me -->
-            <section class="visible-md visible-lg" style="padding: 0 18px">
-                <div class="short-about">
-                    <!--侧边栏头像-->
-                    
-                    <h5><a href="/about/">武阳</a></h5>
-                    
-                    <hr>
-                    <!-- SNS Link 社交 -->
-                    <ul class="list-inline">
-                        
-                        
-                        <li>
-                            <a target="_blank" href="https://twitter.com/ehazon">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                        </span>
-                            </a>
-                        </li>
-                        
-                        
-                        <li>
-                            <a target="_blank" href="https://www.zhihu.com/people/megahertz">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa  fa-stack-1x fa-inverse">知</i>
-                                        </span>
-                            </a>
-                        </li>
-                        
-
-                        
-                        <li>
-                            <a target="_blank" href="http://weibo.com/hailianglone">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                                        </span>
-                            </a>
-                        </li>
-                        
-
-                        
-
-                        
-                        <li>
-                            <a target="_blank" href="https://github.com/hailianglone">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                            </a>
-                        </li>
-                        
-
-                        
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Featured Tags  标签 -->
-            
-            <section>
-                <div class="tags">
-                    
-                </div>
-            </section>
-            
-
-            
-
-        </div>
+          
+        
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/09/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彧衡">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yuheng's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/09/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-09T23:15:37+08:00">
+                2018-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">彧衡</p>
+              <p class="site-description motion-element" itemprop="description">这可能是最简单的表达方式</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">彧衡</span>
+
+  
 </div>
 
-<!-- Footer -->
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <br>
-                <ul class="list-inline text-center">
-                
-                
-                    <li>
-                        <a target="_blank" href="https://twitter.com/ehazon">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
-                
-                    <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/megahertz">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">知</i>
-                            </span>
-                        </a>
-                    </li>
-                
 
-                
-                    <li>
-                        <a target="_blank" href="http://weibo.com/hailianglone">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
-
-                
-
-                
-                    <li>
-                        <a target="_blank"  href="https://github.com/hailianglone">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
-
-                
-
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; 武阳 2018
-                    <br>
-                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
-                    <br>
-                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
-                </p>
-
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/js/blog.js"></script>
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("http://hailianglone.github.io/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-<!-- Google Analytics -->
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
-<!-- Baidu Tongji -->
+  <span class="post-meta-divider">|</span>
 
 
-<!-- swiftype -->
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
 <script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install','','2.0.0');
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="">
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
-
 </html>
