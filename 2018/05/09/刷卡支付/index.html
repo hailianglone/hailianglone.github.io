@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="YuHeng">
 <meta property="og:description" content="刷卡支付刷卡支付，是接入渠道商通过pos款台，扫用户支付码的支付场景">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-11T10:44:40.000Z">
+<meta property="og:updated_time" content="2018-05-11T15:46:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="刷卡付">
 <meta name="twitter:description" content="刷卡支付刷卡支付，是接入渠道商通过pos款台，扫用户支付码的支付场景">
@@ -657,7 +657,6 @@ width: 30%;
 <ul>
 <li><p>返回结果 </p>
 <p>| 字段名                     | 变量名                | 必填 | 类型   | 示例值            | 描述                                                         |<br>| ————————– | ——————— | —- | —— | —————– | ———————————————————— |<br>| 原单支付金额               | oriPayMoney           | 否   | int    | 1000              | 单位（分），只有查询退款时，该值才有意义                     |<br>| 退款时，原单剩余可退金额   | oriSurplusMoney       | 否   | int    | 1000              | 单位（分），只有查询退款时，该值才有意义                     |<br>| 退款时 ，原单接入商订单号  | oriOrderNo            | 否   | String | 201804211320      |                                                              |<br>| 退款时，原单明付平台流水号 | oriTradeSerial        | 否   | String | P901283232343434  |                                                              |<br>| 退款时，原单三方平台流水号 | oriThirdTradeNo       | 否   | String | 40092182888812121 |                                                              |<br>| 总支付金额                 | needPayMoney          | 是   | int    | 1000              | 终端发起的待付金额  needPayMoney=<br>payMoney<br>+thirdDiscountMoney<br>+discountMoney<br>+merchantDiscountMoney |<br>| 用户支付金额               | payMoney              | 是   | int    | 1000              | 用户支付金额                                                 |<br>| 第三方优惠金额             | thirdDiscountMoney    | 否   | int    | 1000              | 第三方优惠金额                                               |<br>| 明付平台优惠金额           | discountMoney         | 否   | int    | 1000              | 明付平台优惠金额                                             |<br>| 接入商优惠金额             | merchantDiscountMoney | 否   | int    | 1000              | 暂不支持                                                     |<br>| 交易时间                   | tradeTime             | 是   | String | 20180504123546    | yyyyMMddHHmmss                                               |<br>| 接入商订单号               | orderNo               | 否   | String | 201804211320      |                                                              |<br>| 明付平台流水号             | tradeSerial           | 否   | String | P901283232343434  |                                                              |<br>| 三方平台流水号             | thirdTradeNo          | 否   | String | 40092182888812121 |                                                              |</p>
-<p>## </p>
 </li>
 </ul>
 <h2 id="订单查询接口"><a href="#订单查询接口" class="headerlink" title="订单查询接口"></a>订单查询接口</h2><p>仅仅支持明付订单号查询 </p>
@@ -1233,15 +1232,15 @@ width: 30%;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/05/09/动态码支付/" rel="next" title="动态码支付">
+                <i class="fa fa-chevron-left"></i> 动态码支付
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/09/动态码支付/" rel="prev" title="动态码支付">
-                动态码支付 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
