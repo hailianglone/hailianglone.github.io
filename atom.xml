@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-11T16:53:27.000Z</updated>
+  <updated>2018-05-11T16:59:14.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,15 @@
     <link href="http://yoursite.com/2018/05/10/hexo_1/"/>
     <id>http://yoursite.com/2018/05/10/hexo_1/</id>
     <published>2018-05-10T14:10:34.000Z</published>
-    <updated>2018-05-11T16:53:27.000Z</updated>
+    <updated>2018-05-11T16:59:14.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote><p>心血来潮，搭建个博客玩玩，看了网上很多教程，有些很全面，我也是参照大家的基本一气呵成，呈现给大家现在的这个样子，但是迫于好奇心，总想知道那些奇奇怪怪的命令到底是什么？于是有了本系列教程的第一部分。    </p></blockquote><p>&lt; !–more–&gt;</p><h1 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h1><ul><li>hexo: 基于nodejs的博客框架  </li><li>next: hexo 主题 </li><li>github: 不解释 </li><li>nodesjs: javascript运行环境  </li><li></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote><p>心血来潮，搭建个博客玩玩，看了网上很多教程，有些很全面，我也是参照大家的基本一气呵成，呈现给大家现在的这个样子，但是迫于好奇心，总想知道那些奇奇怪怪的命令到底是什么？于是有了本系列教程的第一部分。 </p></blockquote><a id="more"></a><h1 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h1><ul><li>hexo: 基于nodejs的博客框架  </li><li>next: hexo 主题 </li><li>github: 不解释 </li><li>nodesjs: javascript运行环境  </li><li></li></ul>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;心血来潮，搭建个博客玩玩，看了网上很多教程，有些很全面，我也是参照大家的基本一气呵成，呈现给大家现在的这个样子，但
-      
+      &lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;心血来潮，搭建个博客玩玩，看了网上很多教程，有些很全面，我也是参照大家的基本一气呵成，呈现给大家现在的这个样子，但是迫于好奇心，总想知道那些奇奇怪怪的命令到底是什么？于是有了本系列教程的第一部分。 &lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
