@@ -94,7 +94,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="支付,公众号," />
+  <meta name="keywords" content="支付,刷卡付," />
 
 
 
@@ -112,18 +112,18 @@
 
 
 
-<meta name="description" content="公众号支付公众号支付，是接入渠道商通过微信公众号页面发起的在线支付场景">
-<meta name="keywords" content="支付,公众号">
+<meta name="description" content="刷卡支付刷卡支付，是接入渠道商通过pos款台，扫用户支付码的支付场景">
+<meta name="keywords" content="支付,刷卡付">
 <meta property="og:type" content="article">
-<meta property="og:title" content="公众号支付">
+<meta property="og:title" content="刷卡付">
 <meta property="og:url" content="http://yoursite.com/2018/05/09/公众号支付/index.html">
 <meta property="og:site_name" content="YuHeng">
-<meta property="og:description" content="公众号支付公众号支付，是接入渠道商通过微信公众号页面发起的在线支付场景">
+<meta property="og:description" content="刷卡支付刷卡支付，是接入渠道商通过pos款台，扫用户支付码的支付场景">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-11T09:32:42.000Z">
+<meta property="og:updated_time" content="2018-05-11T10:23:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="公众号支付">
-<meta name="twitter:description" content="公众号支付公众号支付，是接入渠道商通过微信公众号页面发起的在线支付场景">
+<meta name="twitter:title" content="刷卡付">
+<meta name="twitter:description" content="刷卡支付刷卡支付，是接入渠道商通过pos款台，扫用户支付码的支付场景">
 
 
 
@@ -158,7 +158,7 @@
 
 
 
-  <title>公众号支付 | YuHeng</title>
+  <title>刷卡付 | YuHeng</title>
   
 
 
@@ -322,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">公众号支付</h1>
+          <h1 class="post-title" itemprop="name headline">刷卡付</h1>
         
 
         <div class="post-meta">
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,388
+                  1,541
                 </span>
               
 
@@ -404,7 +404,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  5
+                  6
                 </span>
               
             </div>
@@ -425,20 +425,19 @@
       
 
       
-        <h1 id="公众号支付"><a href="#公众号支付" class="headerlink" title="公众号支付"></a>公众号支付</h1><p>公众号支付，是接入渠道商通过微信公众号页面发起的在线支付场景<br><a id="more"></a><br>渠道接入商接入流程： </p>
+        <h1 id="刷卡支付"><a href="#刷卡支付" class="headerlink" title="刷卡支付"></a>刷卡支付</h1><p>刷卡支付，是接入渠道商通过pos款台，扫用户支付码的支付场景<br><a id="more"></a><br>渠道接入商接入流程： </p>
 <ul>
 <li><p>明付平台分配给渠道商，对应的渠道号，虚拟门店号，款台号（门店号，款台号根据接入商对账要求和接入商一起定义规则） </p>
 </li>
-<li><p>接入商调用明付平台【下单】接口，取得对应公众号支付发起js支付所需参数 </p>
+<li><p>接入商调用明付平台【设备接入】接口，取得对应支付授权码</p>
 </li>
-<li><p>接入商在线支付，监听js 支付接口返回状态，异常情况下请发起查询接口，进行进一步订单状态确认 </p>
+<li><p>接入商调用明付平台 【授权码支付】接口，进行支付</p>
 </li>
 <li><p>如果接入商有退款需求，可根据平台订单号进行【退款】操作 </p>
 </li>
 </ul>
-<p><strong>注意</strong> 暂时不支持支付通知处理 </p>
-<h2 id="下单生成公众号支付参数接口"><a href="#下单生成公众号支付参数接口" class="headerlink" title="下单生成公众号支付参数接口"></a>下单生成公众号支付参数接口</h2><ul>
-<li><p>接口地址： 沙箱：<a href="https://realer.cn/api/payService/{version}/unifiedOrder" target="_blank" rel="noopener">https://realer.cn/api/payService/{version}/unifiedOrder</a><br>  默认版本号 1.0</p>
+<h2 id="设备接入"><a href="#设备接入" class="headerlink" title="设备接入"></a>设备接入</h2><ul>
+<li><p>接口地址： 沙箱：<a href="https://realer.cn/api/payService/{version}/device/checkIn" target="_blank" rel="noopener">https://realer.cn/api/payService/{version}/device/checkIn</a><br>  默认版本号 1.0</p>
 </li>
 <li><p>参数列表  </p>
 </li>
@@ -505,94 +504,6 @@ width: 30%;
 <td></td>
 </tr>
 <tr>
-<td>收银员编号</td>
-<td>cashierNo</td>
-<td>否</td>
-<td>String</td>
-<td>02</td>
-<td></td>
-</tr>
-<tr>
-<td>许可列号</td>
-<td>serierNo</td>
-<td>否</td>
-<td>String</td>
-<td>fe2323df999</td>
-<td>动态码请忽略</td>
-</tr>
-<tr>
-<td>用户ID</td>
-<td>openId</td>
-<td>否</td>
-<td>String</td>
-<td>oG3werwerwer1221</td>
-<td>动态码请忽略</td>
-</tr>
-<tr>
-<td>接入商订单号</td>
-<td>orderNo</td>
-<td>否</td>
-<td>String</td>
-<td>1290012</td>
-<td>接入商不传，默认平台订单号</td>
-</tr>
-<tr>
-<td>订单金额</td>
-<td>amount</td>
-<td>是</td>
-<td>int</td>
-<td>12</td>
-<td>单位（分）</td>
-</tr>
-<tr>
-<td>订单时间</td>
-<td>beginTime</td>
-<td>是</td>
-<td>String</td>
-<td>20180504123546</td>
-<td>yyyyMMddHHmmss</td>
-</tr>
-<tr>
-<td>支付类型</td>
-<td>payType</td>
-<td>是</td>
-<td>String</td>
-<td>WX_NATIVE</td>
-<td>WX_PUBLIC</td>
-</tr>
-<tr>
-<td>IP地址</td>
-<td>ip</td>
-<td>是</td>
-<td>String</td>
-<td>127.0.0.1</td>
-<td></td>
-</tr>
-<tr>
-<td>币种</td>
-<td>currency</td>
-<td>否</td>
-<td>String</td>
-<td>CNY</td>
-<td></td>
-</tr>
-<tr>
-<td>商品详情</td>
-<td>goodsDetail</td>
-<td>否</td>
-<td>String</td>
-<td></td>
-<td>[{“goodsId”:”id0”,”goodsName<br>“:”iname”,”price”:3,”quantity”:2},{“goodsId”:”id1”,”goodsName<br>“:”iname”,”price”:3,”quantity”:2}]</td>
-</tr>
-<tr>
-<td>备注</td>
-<td>comment</td>
-<td>否</td>
-<td>String</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>签名</td>
 <td>sign</td>
 <td>是</td>
@@ -618,79 +529,131 @@ width: 30%;
 </thead>
 <tbody>
 <tr>
-<td>应用ID</td>
-<td>appId</td>
-<td>否</td>
-<td>String</td>
-<td>wxd678efh567hg6787</td>
-<td></td>
-</tr>
-<tr>
-<td>时间戳</td>
-<td>timeStamp</td>
-<td>否</td>
-<td>String</td>
-<td>20180504123546</td>
-<td></td>
-</tr>
-<tr>
-<td>随机串</td>
-<td>nonceStr</td>
-<td>否</td>
-<td>String</td>
-<td>wxd678efh567hg6787fsdfsd2</td>
-<td>随机串</td>
-</tr>
-<tr>
-<td>数据包</td>
-<td>package</td>
-<td>否</td>
-<td>String</td>
-<td>prepay_id<br>=wx2017033010242291<br>fcfe0db70013231072</td>
-<td>统一下单接口返回的 prepay_id 参数值，<br>提交格式如：prepay_id<br>=wx2017033010242291fcfe0db70013231072</td>
-</tr>
-<tr>
-<td>签名方式</td>
-<td>signType</td>
-<td>否</td>
-<td>String</td>
-<td>MD5</td>
-<td>签名类型，默认为MD5，<br>支持HMAC-SHA256和MD5。<br>注意此处需与统一下单的签名类型一致</td>
-</tr>
-<tr>
-<td>签名</td>
-<td>paySign</td>
-<td>否</td>
-<td>String</td>
-<td>oG3werwerwer1221</td>
-<td></td>
-</tr>
-<tr>
-<td>明付平台订单号</td>
-<td>tradeNo</td>
-<td>是</td>
-<td>String</td>
-<td>P98212781821288121</td>
-<td></td>
-</tr>
-<tr>
-<td>第三方平台订单</td>
-<td>outTradeNo</td>
-<td>否</td>
-<td>String</td>
-<td>4001220181230456245</td>
-<td></td>
-</tr>
-<tr>
-<td>二维码URL</td>
-<td>codeUrl</td>
-<td>是</td>
-<td>String</td>
-<td>weixin://123.12121</td>
-<td><strong>动态码关注字段</strong></td>
+<td>授权码 ｜ licenceNo</td>
+<td>是 ｜ String</td>
+<td>4ef234239ioiwejq</td>
 </tr>
 </tbody>
 </table>
+<h2 id="刷卡支付接口"><a href="#刷卡支付接口" class="headerlink" title="刷卡支付接口"></a>刷卡支付接口</h2><p>－ 接口地址： 沙箱： <a href="https://realer.cn/api/payService/{version}/userPayCode" target="_blank" rel="noopener">https://realer.cn/api/payService/{version}/userPayCode</a></p>
+<pre><code>- version 1.0 : 同步请求方式 
+- version 2.0 : 异步请求方式，需要客户端主动发起轮询
+</code></pre><p>－ 参数列表 </p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>变量名</th>
+<th>必填</th>
+<th>类型</th>
+<th>示例值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>授权码</td>
+<td>serierNo</td>
+<td>是</td>
+<td>String</td>
+<td>4ef234239ioiwejq</td>
+<td></td>
+</tr>
+<tr>
+<td>支付授权码</td>
+<td>token</td>
+<td>是</td>
+<td>String</td>
+<td>扫码所得</td>
+<td></td>
+</tr>
+<tr>
+<td>金额</td>
+<td>amount</td>
+<td>是</td>
+<td>int</td>
+<td>10</td>
+<td>单位（分）</td>
+</tr>
+<tr>
+<td>订单号</td>
+<td>orderNo</td>
+<td>是</td>
+<td>String</td>
+<td>接入商订单号</td>
+<td></td>
+</tr>
+<tr>
+<td>订单时间</td>
+<td>beginTime</td>
+<td>是</td>
+<td>String</td>
+<td>20180509123456</td>
+<td>yyyyMMddHHmmss</td>
+</tr>
+<tr>
+<td>支付类型</td>
+<td>payType</td>
+<td>是</td>
+<td>String</td>
+<td>WX_F2F,ALI_F2F,JD_F2F</td>
+<td></td>
+</tr>
+<tr>
+<td>ip</td>
+<td>ip</td>
+<td>是</td>
+<td>String</td>
+<td>127.0.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td>收银员编号</td>
+<td>cashierNo</td>
+<td>是</td>
+<td>String</td>
+<td>80</td>
+<td></td>
+</tr>
+<tr>
+<td>币种</td>
+<td>currency</td>
+<td>否</td>
+<td>String</td>
+<td>CNY</td>
+<td></td>
+</tr>
+<tr>
+<td>商品详情</td>
+<td>goodsDetail</td>
+<td>否</td>
+<td>String</td>
+<td></td>
+<td>[{“goodsId”:”id0”,”goodsName<br>“:”iname”,”price”:3,”quantity”:2},{“goodsId”:”id1”,”goodsName<br>“:”iname”,”price”:3,”quantity”:2}]</td>
+</tr>
+<tr>
+<td>备注</td>
+<td>comment</td>
+<td>是</td>
+<td>String</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>签名</td>
+<td>sign</td>
+<td>是</td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>返回结果 </p>
+<p>| 字段名                     | 变量名                | 必填 | 类型   | 示例值            | 描述                                                         |<br>| ————————– | ——————— | —- | —— | —————– | ———————————————————— |<br>| 原单支付金额               | oriPayMoney           | 否   | int    | 1000              | 单位（分），只有查询退款时，该值才有意义                     |<br>| 退款时，原单剩余可退金额   | oriSurplusMoney       | 否   | int    | 1000              | 单位（分），只有查询退款时，该值才有意义                     |<br>| 退款时 ，原单接入商订单号  | oriOrderNo            | 否   | String | 201804211320      |                                                              |<br>| 退款时，原单明付平台流水号 | oriTradeSerial        | 否   | String | P901283232343434  |                                                              |<br>| 退款时，原单三方平台流水号 | oriThirdTradeNo       | 否   | String | 40092182888812121 |                                                              |<br>| 总支付金额                 | needPayMoney          | 是   | int    | 1000              | 终端发起的待付金额  needPayMoney=<br>payMoney<br>+thirdDiscountMoney<br>+discountMoney<br>+merchantDiscountMoney |<br>| 用户支付金额               | payMoney              | 是   | int    | 1000              | 用户支付金额                                                 |<br>| 第三方优惠金额             | thirdDiscountMoney    | 否   | int    | 1000              | 第三方优惠金额                                               |<br>| 明付平台优惠金额           | discountMoney         | 否   | int    | 1000              | 明付平台优惠金额                                             |<br>| 接入商优惠金额             | merchantDiscountMoney | 否   | int    | 1000              | 暂不支持                                                     |<br>| 交易时间                   | tradeTime             | 是   | String | 20180504123546    | yyyyMMddHHmmss                                               |<br>| 接入商订单号               | orderNo               | 否   | String | 201804211320      |                                                              |<br>| 明付平台流水号             | tradeSerial           | 否   | String | P901283232343434  |                                                              |<br>| 三方平台流水号             | thirdTradeNo          | 否   | String | 40092182888812121 |                                                              |</p>
+<p>## </p>
+</li>
+</ul>
 <h2 id="订单查询接口"><a href="#订单查询接口" class="headerlink" title="订单查询接口"></a>订单查询接口</h2><p>仅仅支持明付订单号查询 </p>
 <ul>
 <li><p>接口地址： 沙箱： <a href="https://realer.cn/api/payService/{version}/tradePayQuery" target="_blank" rel="noopener">https://realer.cn/api/payService/{version}/tradePayQuery</a><br>  默认版本号 1.0 </p>
@@ -1251,7 +1214,7 @@ width: 30%;
           
             <a href="/tags/支付/" rel="tag"># 支付</a>
           
-            <a href="/tags/公众号/" rel="tag"># 公众号</a>
+            <a href="/tags/刷卡付/" rel="tag"># 刷卡付</a>
           
         </div>
       
@@ -1264,15 +1227,15 @@ width: 30%;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/09/动态码支付/" rel="next" title="动态码支付">
-                <i class="fa fa-chevron-left"></i> 动态码支付
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/09/动态码支付/" rel="prev" title="动态码支付">
+                动态码支付 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -1448,7 +1411,7 @@ width: 30%;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#公众号支付"><span class="nav-number">1.</span> <span class="nav-text">公众号支付</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下单生成公众号支付参数接口"><span class="nav-number">1.1.</span> <span class="nav-text">下单生成公众号支付参数接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#订单查询接口"><span class="nav-number">1.2.</span> <span class="nav-text">订单查询接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#订单退款接口"><span class="nav-number">1.3.</span> <span class="nav-text">订单退款接口</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#刷卡支付"><span class="nav-number">1.</span> <span class="nav-text">刷卡支付</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设备接入"><span class="nav-number">1.1.</span> <span class="nav-text">设备接入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刷卡支付接口"><span class="nav-number">1.2.</span> <span class="nav-text">刷卡支付接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#订单查询接口"><span class="nav-number">1.3.</span> <span class="nav-text">订单查询接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#订单退款接口"><span class="nav-number">1.4.</span> <span class="nav-text">订单退款接口</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1494,7 +1457,7 @@ width: 30%;
 </div>
 <div class="theme-info">
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共2.8k字</span>
+  <span class="post-count">博客全站共3.0k字</span>
 </div>
 
 
