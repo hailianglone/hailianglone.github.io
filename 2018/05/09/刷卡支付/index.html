@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="YuHeng">
 <meta property="og:description" content="刷卡支付刷卡支付，是接入渠道商通过pos款台，扫用户支付码的支付场景">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-11T15:46:30.000Z">
+<meta property="og:updated_time" content="2018-05-11T15:48:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="刷卡付">
 <meta name="twitter:description" content="刷卡支付刷卡支付，是接入渠道商通过pos款台，扫用户支付码的支付场景">
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,540
+                  1,502
                 </span>
               
 
@@ -404,7 +404,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  6
+                  5
                 </span>
               
             </div>
@@ -655,10 +655,133 @@ width: 30%;
 </tbody>
 </table>
 <ul>
-<li><p>返回结果 </p>
-<p>| 字段名                     | 变量名                | 必填 | 类型   | 示例值            | 描述                                                         |<br>| ————————– | ——————— | —- | —— | —————– | ———————————————————— |<br>| 原单支付金额               | oriPayMoney           | 否   | int    | 1000              | 单位（分），只有查询退款时，该值才有意义                     |<br>| 退款时，原单剩余可退金额   | oriSurplusMoney       | 否   | int    | 1000              | 单位（分），只有查询退款时，该值才有意义                     |<br>| 退款时 ，原单接入商订单号  | oriOrderNo            | 否   | String | 201804211320      |                                                              |<br>| 退款时，原单明付平台流水号 | oriTradeSerial        | 否   | String | P901283232343434  |                                                              |<br>| 退款时，原单三方平台流水号 | oriThirdTradeNo       | 否   | String | 40092182888812121 |                                                              |<br>| 总支付金额                 | needPayMoney          | 是   | int    | 1000              | 终端发起的待付金额  needPayMoney=<br>payMoney<br>+thirdDiscountMoney<br>+discountMoney<br>+merchantDiscountMoney |<br>| 用户支付金额               | payMoney              | 是   | int    | 1000              | 用户支付金额                                                 |<br>| 第三方优惠金额             | thirdDiscountMoney    | 否   | int    | 1000              | 第三方优惠金额                                               |<br>| 明付平台优惠金额           | discountMoney         | 否   | int    | 1000              | 明付平台优惠金额                                             |<br>| 接入商优惠金额             | merchantDiscountMoney | 否   | int    | 1000              | 暂不支持                                                     |<br>| 交易时间                   | tradeTime             | 是   | String | 20180504123546    | yyyyMMddHHmmss                                               |<br>| 接入商订单号               | orderNo               | 否   | String | 201804211320      |                                                              |<br>| 明付平台流水号             | tradeSerial           | 否   | String | P901283232343434  |                                                              |<br>| 三方平台流水号             | thirdTradeNo          | 否   | String | 40092182888812121 |                                                              |</p>
-</li>
+<li>返回结果 </li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>变量名</th>
+<th>必填</th>
+<th>类型</th>
+<th>示例值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原单支付金额</td>
+<td>oriPayMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>单位（分），只有查询退款时，该值才有意义</td>
+</tr>
+<tr>
+<td>退款时，原单剩余可退金额</td>
+<td>oriSurplusMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>单位（分），只有查询退款时，该值才有意义</td>
+</tr>
+<tr>
+<td>退款时 ，原单接入商订单号</td>
+<td>oriOrderNo</td>
+<td>否</td>
+<td>String</td>
+<td>201804211320</td>
+<td></td>
+</tr>
+<tr>
+<td>退款时，原单明付平台流水号</td>
+<td>oriTradeSerial</td>
+<td>否</td>
+<td>String</td>
+<td>P901283232343434</td>
+<td></td>
+</tr>
+<tr>
+<td>退款时，原单三方平台流水号</td>
+<td>oriThirdTradeNo</td>
+<td>否</td>
+<td>String</td>
+<td>40092182888812121</td>
+<td></td>
+</tr>
+<tr>
+<td>总支付金额</td>
+<td>needPayMoney</td>
+<td>是</td>
+<td>int</td>
+<td>1000</td>
+<td>终端发起的待付金额  needPayMoney=<br>payMoney<br>+thirdDiscountMoney<br>+discountMoney<br>+merchantDiscountMoney</td>
+</tr>
+<tr>
+<td>用户支付金额</td>
+<td>payMoney</td>
+<td>是</td>
+<td>int</td>
+<td>1000</td>
+<td>用户支付金额</td>
+</tr>
+<tr>
+<td>第三方优惠金额</td>
+<td>thirdDiscountMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>第三方优惠金额</td>
+</tr>
+<tr>
+<td>明付平台优惠金额</td>
+<td>discountMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>明付平台优惠金额</td>
+</tr>
+<tr>
+<td>接入商优惠金额</td>
+<td>merchantDiscountMoney</td>
+<td>否</td>
+<td>int</td>
+<td>1000</td>
+<td>暂不支持</td>
+</tr>
+<tr>
+<td>交易时间</td>
+<td>tradeTime</td>
+<td>是</td>
+<td>String</td>
+<td>20180504123546</td>
+<td>yyyyMMddHHmmss</td>
+</tr>
+<tr>
+<td>接入商订单号</td>
+<td>orderNo</td>
+<td>否</td>
+<td>String</td>
+<td>201804211320</td>
+<td></td>
+</tr>
+<tr>
+<td>明付平台流水号</td>
+<td>tradeSerial</td>
+<td>否</td>
+<td>String</td>
+<td>P901283232343434</td>
+<td></td>
+</tr>
+<tr>
+<td>三方平台流水号</td>
+<td>thirdTradeNo</td>
+<td>否</td>
+<td>String</td>
+<td>40092182888812121</td>
+</tr>
+</tbody>
+</table>
 <h2 id="订单查询接口"><a href="#订单查询接口" class="headerlink" title="订单查询接口"></a>订单查询接口</h2><p>仅仅支持明付订单号查询 </p>
 <ul>
 <li><p>接口地址： 沙箱： <a href="https://realer.cn/api/payService/{version}/tradePayQuery" target="_blank" rel="noopener">https://realer.cn/api/payService/{version}/tradePayQuery</a><br>  默认版本号 1.0 </p>
@@ -1242,6 +1365,10 @@ width: 30%;
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/05/09/公众号支付/" rel="prev" title="公众号支付">
+                公众号支付 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -1462,7 +1589,7 @@ width: 30%;
 </div>
 <div class="theme-info">
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共4.4k字</span>
+  <span class="post-count">博客全站共4.3k字</span>
 </div>
 
 
