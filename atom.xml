@@ -48,9 +48,9 @@
     <link href="http://yoursite.com/2018/05/13/kownledge/"/>
     <id>http://yoursite.com/2018/05/13/kownledge/</id>
     <published>2018-05-13T07:22:10.000Z</published>
-    <updated>2018-05-13T10:35:08.000Z</updated>
+    <updated>2018-05-14T11:20:53.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="mac-拼音选择框不见？"><a href="#mac-拼音选择框不见？" class="headerlink" title="mac 拼音选择框不见？"></a>mac 拼音选择框不见？</h1><p>打开 Terminal （命令行），输入下面，回车即可。 </p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkill -f SCIM.app</span><br></pre></td></tr></table></figure><p>​    </p>]]></content>
+    <content type="html"><![CDATA[<h1 id="mac-拼音选择框不见？"><a href="#mac-拼音选择框不见？" class="headerlink" title="mac 拼音选择框不见？"></a>mac 拼音选择框不见？</h1><p>打开 Terminal （命令行），输入下面，回车即可。 </p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkill -f SCIM.app</span><br></pre></td></tr></table></figure><h1 id="Linux-下Tomcat-deploy-阻塞在INFO-Deploying-web-application-directory-…"><a href="#Linux-下Tomcat-deploy-阻塞在INFO-Deploying-web-application-directory-…" class="headerlink" title="Linux 下Tomcat deploy 阻塞在INFO: Deploying web application directory ….?"></a>Linux 下Tomcat deploy 阻塞在INFO: Deploying web application directory ….?</h1><p>linux 或者部分unix系统提供随机数设备是/dev/random和/dev/urandom，两个区别是，random安全性高，</p><p>生成随机数时间间隔有点长，jdk默认random.</p><p>修改$JAVA_HOME/jre/lib/security/java.security文件，替换securerandom.source=file:/dev/random/为secureradom.source=file:/dev/./urandom    </p>]]></content>
     
     <summary type="html">
     
