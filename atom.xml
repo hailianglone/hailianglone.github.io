@@ -260,4 +260,48 @@
     
   </entry>
   
+  <entry>
+    <title>web服务一些概念理解</title>
+    <link href="http://yoursite.com/2017/03/23/server/"/>
+    <id>http://yoursite.com/2017/03/23/server/</id>
+    <published>2017-03-23T07:23:45.000Z</published>
+    <updated>2018-05-16T09:18:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="关于服务器"><a href="#关于服务器" class="headerlink" title="关于服务器"></a>关于服务器</h1><ol><li>独立服务器 </li></ol><blockquote><p>机房里实实在在的物理服务器，也可以理解为高配版的pc机。</p></blockquote><ol start="2"><li>vps (虚拟专用服务器）</li></ol><blockquote><p>独立服务器通过虚拟化技术虚拟出多个专用服务器。 </p></blockquote><ol start="3"><li>云服务ECS(Elastic Compute Service) </li></ol><blockquote><p>建立在服务器集群之上的，可以理解为，也是通过虚拟化技术整合多台独立服务器资源的弹性服务器。</p></blockquote><ol start="4"><li>虚拟主机 </li></ol><blockquote><p>一个独立主机或者vps服务器上，可以运行多个站点的技术。<br><a id="more"></a><br><strong>通俗的理解:</strong> </p></blockquote><p>云服务可以看作是大酒店，独立服务器可以认为是酒店的房间，vps 理解为房间的卧室，虚拟主机理解为卧室里一个床位。</p><p>你买了一个<strong>云服务</strong>，相当于你定了一个房间(这里只是比喻，这里并不一定是独立服务器），不够用随时加订，每一间卧室<strong>（vps)</strong>都可以睡觉，看电视，拉便便，但是<strong>虚拟主机</strong>就只能让你睡觉（部署站点用）。 </p><h1 id="关于apache-http-server-tomcat-nginx"><a href="#关于apache-http-server-tomcat-nginx" class="headerlink" title="关于apache http server, tomcat, nginx"></a>关于apache http server, tomcat, nginx</h1><p>严格来说，apache http server/nginx 应该叫做<strong>HTTP Server</strong>(当然nginx可以作为邮件服务，Tcp服务适用）,tomcat 是<strong>AppServer</strong>，他们都可以： </p><ul><li>运行在上面说的服务器上，通过绑定服务器的ip地址，并监听某个tcp端口来接受并处理http请求。</li><li>通过配置，生成多个虚拟主机</li></ul><p>他们不同在于： </p><ul><li>apache http server/nginx 可以做代理，负载均衡，处理静态资源(就是不同客户端看到的东西是一样的)。</li><li>tomcat 可以处理动态资源（就是不同客户端看到的东西是不一样的）。</li></ul><p>所以一般tomcat 是和nginx配合使用的： </p><ul><li>动静资源分离，通过nginx反向代理功能，分发请求，动态资源交给tomcat,而静态资源直接邮nginx返回，这样大大减轻tomcat压力。 </li><li>负载均衡，业务压力增大时，一个tomcat 不足以处理时，可以启动多个tomcat实例进行水平扩展,而nginx的负载均衡功能可以把请求分发到不同的tomcat实例上。</li></ul><h1 id="正向代理-和-反向代理"><a href="#正向代理-和-反向代理" class="headerlink" title="正向代理 和 反向代理"></a>正向代理 和 反向代理</h1><p><img src="http://p8kn4m8eo.bkt.clouddn.com/nginx_3.jpg" alt=""></p><p>你想访问被墙掉的谷歌，你可以买一个vpn。这个vpn是你买的，是代理你去向谷歌发起请求的。</p><p><img src="http://p8kn4m8eo.bkt.clouddn.com/nginx_2.jpg" alt=""></p><p>你想访问百度，会有一个转发，到百度内网，对于你来说你不知道，也不关心，它是代理百度内部的服务。</p><p><strong>所以正向代理和反向代理的说法是相对的,但是通常描述都是以客户端为对照方（即发起请求方）</strong></p><h1 id="关于负载均衡"><a href="#关于负载均衡" class="headerlink" title="关于负载均衡"></a>关于负载均衡</h1><h2 id="它是做什么用的呢？"><a href="#它是做什么用的呢？" class="headerlink" title="它是做什么用的呢？"></a>它是做什么用的呢？</h2><p>其实可以按照动词的方式理解，反过来均衡负载，就是你的业务负载高的时候，通过一些技术手段均衡你的业务负载。 </p><h2 id="那些技术实现负载均衡呢？"><a href="#那些技术实现负载均衡呢？" class="headerlink" title="那些技术实现负载均衡呢？"></a>那些技术实现负载均衡呢？</h2><ul><li>硬负载<ul><li>F5</li><li>Array   </li></ul></li><li>软负载 <ul><li>dns </li><li>lvs</li><li>nginx </li><li>haproxy       </li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;关于服务器&quot;&gt;&lt;a href=&quot;#关于服务器&quot; class=&quot;headerlink&quot; title=&quot;关于服务器&quot;&gt;&lt;/a&gt;关于服务器&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;独立服务器 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;机房里实实在在的物理服务器，也可以理解为高配版的pc机。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;vps (虚拟专用服务器）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;独立服务器通过虚拟化技术虚拟出多个专用服务器。 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;云服务ECS(Elastic Compute Service) &lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;建立在服务器集群之上的，可以理解为，也是通过虚拟化技术整合多台独立服务器资源的弹性服务器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;虚拟主机 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个独立主机或者vps服务器上，可以运行多个站点的技术。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="web" scheme="http://yoursite.com/tags/web/"/>
+    
+  </entry>
+  
 </feed>
