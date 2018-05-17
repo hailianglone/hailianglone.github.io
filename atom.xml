@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-17T08:36:12.000Z</updated>
+  <updated>2018-05-17T09:03:12.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/05/17/docker/"/>
     <id>http://yoursite.com/2018/05/17/docker/</id>
     <published>2018-05-17T07:23:22.000Z</published>
-    <updated>2018-05-17T08:36:12.000Z</updated>
+    <updated>2018-05-17T09:03:12.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Docker-vs-VM"><a href="#Docker-vs-VM" class="headerlink" title="Docker vs VM"></a>Docker vs VM</h1><p><img src="http://p8kn4m8eo.bkt.clouddn.com/dock1.png" alt=""></p><p><img src="http://p8kn4m8eo.bkt.clouddn.com/dock2.png" alt=""></p><p><img src="http://p8kn4m8eo.bkt.clouddn.com/dock3.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Docker-vs-VM"><a href="#Docker-vs-VM" class="headerlink" title="Docker vs VM"></a>Docker vs VM</h1><p><img src="http://p8kn4m8eo.bkt.clouddn.com/dock1.png" alt=""></p><p> <strong>注</strong>: 关于docker 里，宿主os和容器os必须相同，这点是错误的。宿主os和容器os是可以不同的，但是</p><p>​       目前容器os只能是linux。作者这里描述不同，是因为没考虑windows上跑docker.应为windows 上</p><p>​       跑docker，其实底下跑了linux vm的。</p><p><img src="http://p8kn4m8eo.bkt.clouddn.com/dock2.png" alt=""></p><p><img src="http://p8kn4m8eo.bkt.clouddn.com/dock3.png" alt=""></p>]]></content>
     
     <summary type="html">
     
