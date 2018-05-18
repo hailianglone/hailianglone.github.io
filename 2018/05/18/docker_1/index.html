@@ -112,18 +112,18 @@
 
 
 
-<meta name="description" content="Docker vs vpsThe perspective on containers is very different between the 2. In short OpenVZ sees a container as a VPS, and docker sees a container as an application/service. What does this imply? For">
+<meta name="description" content="Docker vs vpsThe perspective on containers is very different between the 2. In short OpenVZ sees a container as a VPS, and docker sees a container as an application/service.">
 <meta name="keywords" content="经验">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker vs vps">
 <meta property="og:url" content="http://yoursite.com/2018/05/18/docker_1/index.html">
 <meta property="og:site_name" content="YuHeng">
-<meta property="og:description" content="Docker vs vpsThe perspective on containers is very different between the 2. In short OpenVZ sees a container as a VPS, and docker sees a container as an application/service. What does this imply? For">
+<meta property="og:description" content="Docker vs vpsThe perspective on containers is very different between the 2. In short OpenVZ sees a container as a VPS, and docker sees a container as an application/service.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-18T07:10:41.000Z">
+<meta property="og:updated_time" content="2018-05-18T07:30:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker vs vps">
-<meta name="twitter:description" content="Docker vs vpsThe perspective on containers is very different between the 2. In short OpenVZ sees a container as a VPS, and docker sees a container as an application/service. What does this imply? For">
+<meta name="twitter:description" content="Docker vs vpsThe perspective on containers is very different between the 2. In short OpenVZ sees a container as a VPS, and docker sees a container as an application/service.">
 
 
 
@@ -460,7 +460,8 @@
 
       
         <h1 id="Docker-vs-vps"><a href="#Docker-vs-vps" class="headerlink" title="Docker vs vps"></a>Docker vs vps</h1><p>The perspective on containers is very different between the 2.</p>
-<p>In short OpenVZ sees a container as a VPS, and docker sees a container as an application/service.</p>
+<p>In short OpenVZ sees a container as a VPS, and docker sees a container as an application/service. </p>
+<a id="more"></a>
 <p>What does this imply? For OpenVZ you can expect that when you create containers, its sort of like making Virtual Servers. OpenVZ has interfaces focussed on setting up VPS containers that you decorate yourself manually. Therefore they provide templates for empty linux machines that you can start up and shut down, that you afterward SSH into, to set them up yourself with whatever you need, like a LAMP stack.</p>
 <p>When you would want to set up a LAMP stack, you would do it like you usually do when you set up a new server. You get an empty linux machine with a virtual ethernet adapter that has its own publicly accessible WAN IP with Ubuntu on it, access it with SSH, and you install all required services in it using your average package manager (yum or apt) and do the setup required in config files yourself.</p>
 <p>For Docker, you can expect that when you create containers, the container is a single application, that just does ONE thing. Hence, it might need some other containers to help it. (For example a container that provides a database) Docker made it very easy to define whats inside a container without having to actually start one up, and constantly create new exactly equals instances of this container. They define the contents of a docker container (the image) by using very lightweight templates that they call Dockerfiles.</p>
@@ -548,8 +549,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/17/docker/" rel="next" title="docker vs vm">
-                <i class="fa fa-chevron-left"></i> docker vs vm
+              <a href="/2018/05/17/server/" rel="next" title="web服务一些概念理解">
+                <i class="fa fa-chevron-left"></i> web服务一些概念理解
               </a>
             
           </div>

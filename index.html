@@ -463,41 +463,214 @@
 
       
         
-          
-            <h1 id="Docker-vs-vps"><a href="#Docker-vs-vps" class="headerlink" title="Docker vs vps"></a>Docker vs vps</h1><p>The perspective on containers is very different between the 2.</p>
-<p>In short OpenVZ sees a container as a VPS, and docker sees a container as an application/service.</p>
-<p>What does this imply? For OpenVZ you can expect that when you create containers, its sort of like making Virtual Servers. OpenVZ has interfaces focussed on setting up VPS containers that you decorate yourself manually. Therefore they provide templates for empty linux machines that you can start up and shut down, that you afterward SSH into, to set them up yourself with whatever you need, like a LAMP stack.</p>
-<p>When you would want to set up a LAMP stack, you would do it like you usually do when you set up a new server. You get an empty linux machine with a virtual ethernet adapter that has its own publicly accessible WAN IP with Ubuntu on it, access it with SSH, and you install all required services in it using your average package manager (yum or apt) and do the setup required in config files yourself.</p>
-<p>For Docker, you can expect that when you create containers, the container is a single application, that just does ONE thing. Hence, it might need some other containers to help it. (For example a container that provides a database) Docker made it very easy to define whats inside a container without having to actually start one up, and constantly create new exactly equals instances of this container. They define the contents of a docker container (the image) by using very lightweight templates that they call Dockerfiles.</p>
-<p>There is a huge set of dockerfiles already out there, that you can find in the Docker hub, take a look yourself (its like being in a candy shop with free candy! :D): docker hub. The images produced by these dockerfiles can be pulled with the docker CLI tool, by using a pull command. In docker theres also easy access to stuff like port forwarding, virtual directories (so that you can acces files on the host machine easily) and things alike that any executable could use.</p>
-<p>The perspective on containers is very different between the 2.</p>
-<p>In short OpenVZ sees a container as a VPS, and docker sees a container as an application/service.</p>
-<p>What does this imply? For OpenVZ you can expect that when you create containers, its sort of like making Virtual Servers. OpenVZ has interfaces focussed on setting up VPS containers that you decorate yourself manually. Therefore they provide templates for empty linux machines that you can start up and shut down, that you afterward SSH into, to set them up yourself with whatever you need, like a LAMP stack.</p>
-<p>When you would want to set up a LAMP stack, you would do it like you usually do when you set up a new server. You get an empty linux machine with a virtual ethernet adapter that has its own publicly accessible WAN IP with Ubuntu on it, access it with SSH, and you install all required services in it using your average package manager (yum or apt) and do the setup required in config files yourself.</p>
-<p>For Docker, you can expect that when you create containers, the container is a single application, that just does ONE thing. Hence, it might need some other containers to help it. (For example a container that provides a database) Docker made it very easy to define whats inside a container without having to actually start one up, and constantly create new exactly equals instances of this container. They define the contents of a docker container (the image) by using very lightweight templates that they call Dockerfiles.</p>
-<p>There is a huge set of dockerfiles already out there, that you can find in the Docker hub, take a look yourself (its like being in a candy shop with free candy! :D): docker hub. The images produced by these dockerfiles can be pulled with the docker CLI tool, by using a pull command. In docker theres also easy access to stuff like port forwarding, virtual directories (so that you can acces files on the host machine easily) and things alike that any executable could use.</p>
-<p>If you would want a LAMP stack in docker, all you do is “docker run -d -p 80:80 tutum/lamp”</p>
-<p>This pulls the image tutum/lamp, and runs daemonised (-d) it with port 80 from the container forwarded to the port 80 of the host, exposing the inner webservice to the outside. As you can see, it does not have its own IP address in contrast to an OpenVZ machine. And its just like its an apache server running on your root machine. The advantage compared to installing it natively, is that docker makes the installation a lot easier and unlimitedly replicable. Also it doesn’t clutter your host machine with lots of files, and supplies a security boundary around your application.</p>
-<p>注：openVZ 是实现vps的一种虚拟技术，所以这里直接拿它来做比较。 </p>
-<p><strong>简译</strong>:</p>
-<p>两者在对容器的解读上有很大的不同。</p>
-<p>简而言之，openVZ 它是把容器作为vps，而docker 把容器作为应用程序服务。</p>
-<h2 id="OpenVZ"><a href="#OpenVZ" class="headerlink" title="OpenVZ"></a>OpenVZ</h2><ul>
-<li><p>它就是一个linux服务器，你可以和操作独立服务器一样，ssh登陆，安装软件包，比如LAMP。</p>
-</li>
-<li><p>它带有虚拟以太网适配器，可以有自己的独立ip.</p>
-</li>
-</ul>
-<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><ul>
-<li><p>它是单个应用程序，只做一件事，就像是服务器上运行的apache</p>
-</li>
-<li><p>没有自己的独立ip</p>
-</li>
-<li><p>优势就是它有docker hub，安装容易并且可以无限复制</p>
-</li>
-</ul>
+          <h1 id="Docker-vs-vps"><a href="#Docker-vs-vps" class="headerlink" title="Docker vs vps"></a>Docker vs vps</h1><p>The perspective on containers is very different between the 2.</p>
+<p>In short OpenVZ sees a container as a VPS, and docker sees a container as an application/service. </p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/18/docker_1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彧衡">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuHeng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/17/server/" itemprop="url">web服务一些概念理解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T15:23:45+08:00">
+                2018-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,680
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  11
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="关于服务器"><a href="#关于服务器" class="headerlink" title="关于服务器"></a>关于服务器</h1><h2 id="服务器种类介绍"><a href="#服务器种类介绍" class="headerlink" title="服务器种类介绍"></a>服务器种类介绍</h2><ol>
+<li>独立服务器 </li>
+</ol>
+<blockquote>
+<p>机房里实实在在的物理服务器，也可以理解为高配版的pc机。</p>
+</blockquote>
+<ol start="2">
+<li>vps (虚拟专用服务器）</li>
+</ol>
+<blockquote>
+<p>独立服务器通过虚拟化技术虚拟出多个专用服务器。 </p>
+</blockquote>
+<ol start="3">
+<li>云服务ECS(Elastic Compute Service) </li>
+</ol>
+<blockquote>
+<p>建立在服务器集群之上的，可以理解为，也是通过虚拟化技术整合多台独立服务器资源的弹性服务器。</p>
+</blockquote>
+<ol start="4">
+<li>虚拟主机 </li>
+</ol>
+<blockquote>
+<p>一个独立主机或者vps服务器上，可以运行多个站点的技术。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/17/server/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1919,235 +2092,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/05/09/uremote/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/uremote_1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="彧衡">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuHeng">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/09/uremote_1/" itemprop="url">URemoteSdk接口文档</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T23:44:13+08:00">
-                2017-05-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  3,530
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  16
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>文档修订记录：</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>日期</strong></th>
-<th><strong>版本</strong></th>
-<th><strong>说明</strong></th>
-<th><strong>作者</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2017-05-22</td>
-<td>1.0</td>
-<td>uremotesdk 接口文档</td>
-<td>张海亮</td>
-</tr>
-<tr>
-<td>2017-07-03</td>
-<td>1.0</td>
-<td>增加listener,callback接口说明</td>
-<td>张海亮</td>
-</tr>
-<tr>
-<td>2017-07-05</td>
-<td>1.0</td>
-<td>增加播控接口说明</td>
-<td>张海亮</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h1 id="1-文档说明"><a href="#1-文档说明" class="headerlink" title="1 文档说明"></a>1 文档说明</h1><h2 id="1-1-功能描述"><a href="#1-1-功能描述" class="headerlink" title="1.1 功能描述"></a>1.1 功能描述</h2><p>URemoteSdk 是盛世辉科技有限公司提供得一套针对电视盒子和盛世辉遥控器进行网络自定义指令通信方案。第三方盒子APP通过该sdk得接入，可以很放便的通过遥控器操控盒子，实现一些传统遥控器不可有的一些用户操作体验。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/09/uremote_1/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
