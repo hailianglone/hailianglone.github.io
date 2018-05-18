@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Python 算法练习]]></title>
     <url>%2F2018%2F05%2F18%2Falgorithm%2F</url>
-    <content type="text"><![CDATA[插入排序123456789101112131415161718192021222324252627282930# coding:UTF-8import random# 随机数def get_andomNumber(num): lists=[] i=0 while i&lt;num: lists.append(random.randint(0,100)) i+=1 return lists# 插入排序def insert_sort(lists): for i in range(1,len(lists)): key = lists[i] j = i - 1 while j &gt;= 0: if lists[j] &gt; key: lists[j],lists[j+1] = key, lists[j] j -= 1 return lists;a = get_andomNumber(10)print(&quot;排序之前：%s&quot; %a)b = insert_sort(a)print(&quot;排序之后：%s&quot; %b)#时间复杂度f(n) = 1 + 2 + ...+n-1 = n^2/2,所以O(f(n)) = O(n^2)]]></content>
+    <content type="text"><![CDATA[插入排序，冒泡排序12345678910111213141516171819202122232425262728293031323334353637383940414243# coding:UTF-8import random# 随机数def get_andomNumber(num): lists=[] i=0 while i&lt;num: lists.append(random.randint(0,100)) i+=1 return lists# 插入排序def insert_sort(lists): for i in range(1,len(lists)): key = lists[i] j = i - 1 while j &gt;= 0: if lists[j] &gt; key: lists[j],lists[j+1] = key, lists[j] j -= 1 return lists#冒泡排序def buddle_sort(lists): count = len(lists) - 1 for i in range(0,count): for j in range(0,count-i-1): if lists[j] &gt; lists[j+1]: lists[j],lists[j+1] = lists[j+1],lists[j] return listsa = get_andomNumber(10)print(&quot;排序之前：%s&quot; %a)b = insert_sort(a)print(&quot;插入排序：%s&quot; %b)c = buddle_sort(a)print(&quot;冒泡排序：%s&quot; %c)#时间复杂度f(n) = 1 + 2 + ...+n-1 = n^2/ 2 - n/2,所以O(f(n)) = n^2]]></content>
       <categories>
         <category>Python</category>
       </categories>
