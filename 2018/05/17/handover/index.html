@@ -120,10 +120,12 @@
 <meta property="og:site_name" content="YuHeng">
 <meta property="og:description" content="公司资源三方平台 微信开放平台 (360停车应用)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-21T06:02:01.000Z">
+<meta property="og:image" content="http://p8kn4m8eo.bkt.clouddn.com/thirdpay.png">
+<meta property="og:updated_time" content="2018-05-21T06:19:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工作交接事项">
 <meta name="twitter:description" content="公司资源三方平台 微信开放平台 (360停车应用)">
+<meta name="twitter:image" content="http://p8kn4m8eo.bkt.clouddn.com/thirdpay.png">
 
 
 
@@ -422,7 +424,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,118
+                  2,193
                 </span>
               
 
@@ -709,7 +711,44 @@
 </tbody>
 </table>
 <h1 id="支付服务"><a href="#支付服务" class="headerlink" title="支付服务"></a>支付服务</h1><p>明付平台是我司研发的聚合支付平台，目前已支持微信，支付宝，京东，翼支付，银联。</p>
-<h2 id="服务架构"><a href="#服务架构" class="headerlink" title="服务架构"></a>服务架构</h2><h3 id="支付sdk-服务"><a href="#支付sdk-服务" class="headerlink" title="支付sdk 服务"></a>支付sdk 服务</h3><h3 id="支付调度（报表）服务"><a href="#支付调度（报表）服务" class="headerlink" title="支付调度（报表）服务"></a>支付调度（报表）服务</h3><h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><h2 id="部署架构"><a href="#部署架构" class="headerlink" title="部署架构"></a>部署架构</h2><h2 id="接口文档"><a href="#接口文档" class="headerlink" title="接口文档"></a>接口文档</h2><ul>
+<h2 id="服务架构"><a href="#服务架构" class="headerlink" title="服务架构"></a>服务架构</h2><h3 id="支付sdk-服务"><a href="#支付sdk-服务" class="headerlink" title="支付sdk 服务"></a>支付sdk 服务</h3><h3 id="支付调度（报表）服务"><a href="#支付调度（报表）服务" class="headerlink" title="支付调度（报表）服务"></a>支付调度（报表）服务</h3><h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><p><img src="http://p8kn4m8eo.bkt.clouddn.com/thirdpay.png" alt=""></p>
+<ul>
+<li><p>基础工具库</p>
+<ul>
+<li>thirdpay_common: 基础 </li>
+</ul>
+</li>
+<li><p>业务层</p>
+<ul>
+<li>thirdpay_service,thirdpay_service_iml: 平台业务层</li>
+<li>thirdpay_platform_service: 平台业务和三方业务api网关</li>
+</ul>
+</li>
+<li><p>三方业务</p>
+<ul>
+<li><p>thirdpay_service_ALI: 支付宝支付</p>
+</li>
+<li><p>thirdpay_service_HWallet:华联钱包（已废弃）</p>
+</li>
+<li><p>thirdpay_service_WX: 微信支付</p>
+</li>
+<li><p>thirdpay_service_UnionPay: 银联支付</p>
+</li>
+<li><p>thirdpay_service_JD: 京东</p>
+</li>
+<li><p>thirdpay_service_YZF: 翼支付 </p>
+</li>
+<li><p>thirdpay_service_mobile:移动和包 </p>
+</li>
+</ul>
+</li>
+<li><p>控制层 </p>
+<ul>
+<li>thirdpay_web</li>
+</ul>
+</li>
+</ul>
+<h2 id="部署架构"><a href="#部署架构" class="headerlink" title="部署架构"></a>部署架构</h2><h2 id="接口文档"><a href="#接口文档" class="headerlink" title="接口文档"></a>接口文档</h2><ul>
 <li style="list-style: none"><input type="checkbox" checked> 刷卡付：<a href="http://yuhengzhang.cn/2018/05/09/%E5%88%B7%E5%8D%A1%E6%94%AF%E4%BB%98/" target="_blank" rel="noopener">http://yuhengzhang.cn/2018/05/09/%E5%88%B7%E5%8D%A1%E6%94%AF%E4%BB%98/</a></li>
 <li style="list-style: none"><input type="checkbox" checked> 公众号支付： <a href="http://yuhengzhang.cn/2018/05/09/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%94%AF%E4%BB%98/" target="_blank" rel="noopener">http://yuhengzhang.cn/2018/05/09/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%94%AF%E4%BB%98/</a></li>
 <li style="list-style: none"><input type="checkbox" checked> 动态码支付：<a href="http://yuhengzhang.cn/2018/05/09/%E5%8A%A8%E6%80%81%E7%A0%81%E6%94%AF%E4%BB%98/" target="_blank" rel="noopener">http://yuhengzhang.cn/2018/05/09/%E5%8A%A8%E6%80%81%E7%A0%81%E6%94%AF%E4%BB%98/</a></li>
@@ -1224,7 +1263,7 @@
 </div>
 <div class="theme-info">
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共17.8k字</span>
+  <span class="post-count">博客全站共17.9k字</span>
 </div>
 
 
