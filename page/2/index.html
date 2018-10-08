@@ -340,209 +340,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/13/安全/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="彧衡">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuHeng">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/13/安全/" itemprop="url">服务安全</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-13T18:23:12+08:00">
-                2018-05-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/经验/" itemprop="url" rel="index">
-                    <span itemprop="name">经验</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  555
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h1><h2 id="存储相关"><a href="#存储相关" class="headerlink" title="存储相关"></a>存储相关</h2><ul>
-<li style="list-style: none"><input type="checkbox"> 数据库仅支持内网访问 </li>
-<li style="list-style: none"><input type="checkbox"> 数据库驱动帐号，密码配置文件，通过AES加密处理，使用时动态解密处理</li>
-<li style="list-style: none"><input type="checkbox"> 数据库密码复杂度要至少包含大小写字母，特殊符号及数字，8位以上</li>
-<li style="list-style: none"><input type="checkbox"> 数据库做读写分离，针对读库和写库分别配置不同的权限帐号</li>
-<li style="list-style: none"><input type="checkbox"> 数据库管理员帐号，密码只对DBA负责人开放</li>
-<li style="list-style: none"><input type="checkbox"> 数据库敏感信息，如用户手机号，商户信息等持久化和反序列化采用AES等相关加密算法进行处理</li>
-<li style="list-style: none"><input type="checkbox"> 数据库性能指标TPS,要根据相关业务和用户使用量，进行设计和规划基准测试，比如用sysbench分别进行cpu的基准测试和i/o的基准测试，有条件的话，可以拿dump生产环境进行压力测试</li>
-<li style="list-style: none"><input type="checkbox"> 数据库sql语句使用要避免可以进行sql注入攻击的拼写方法</li>
-<li style="list-style: none"><input type="checkbox"> 数据库关键信息，要分别支持冷备和热备</li>
-</ul>
-<h2 id="应用服务和负载均衡"><a href="#应用服务和负载均衡" class="headerlink" title="应用服务和负载均衡"></a>应用服务和负载均衡</h2><ul>
-<li style="list-style: none"><input type="checkbox"> Https支持</li>
-<li style="list-style: none"><input type="checkbox"> 如果是平台接入，iptables要设置访问白名单</li>
-<li style="list-style: none"><input type="checkbox"> 应用服务部署单独分配部署帐号，不采用root用户</li>
-<li style="list-style: none"><input type="checkbox"> 核心应用服务尽量和其他应用服务分离</li>
-<li style="list-style: none"><input type="checkbox"> 请求和返回进行加签和验签处理</li>
-<li style="list-style: none"><input type="checkbox"> 某些业务请求要保证幂等性（分布式锁，或者数据库支持等）</li>
-<li style="list-style: none"><input type="checkbox"> 后台应用服务，进行严格权限管理</li>
-<li style="list-style: none"><input type="checkbox"> 防止频繁相同请求恶意攻击（例如，可以简单的过滤器实现）</li>
-<li style="list-style: none"><input type="checkbox"> 后台管理页面要防止js注入，中间人劫持等攻击</li>
-<li style="list-style: none"><input type="checkbox"> 进行模拟ddos攻击测试</li>
-<li style="list-style: none"><input type="checkbox"> 应用日志要严格控制敏感信息和日志等级处理</li>
-</ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
-<li style="list-style: none"><input type="checkbox"> 保证高可用，无论存储服务，应用服务，负载分发服务一定要保证多节点部署</li>
-<li style="list-style: none"><input type="checkbox"> 保证高并发，无论存储服务，应用服务，负载分发服务一定要保证容易水平扩展</li>
-<li style="list-style: none"><input type="checkbox"> 保证网络稳定性，做好多运营商节点部署功能</li>
-<li style="list-style: none"><input type="checkbox"> 支持热部署，及灰度发布</li>
-</ul>
-<p>d</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/13/kownledge/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1430,183 +1227,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/uremote/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="彧衡">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuHeng">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/09/uremote/" itemprop="url">URemoteSdk 开发文档</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T23:44:13+08:00">
-                2017-05-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  1,082
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  4
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h1 id="1-文档说明"><a href="#1-文档说明" class="headerlink" title="1 文档说明"></a>1 文档说明</h1><h2 id="功能描述"><a href="#功能描述" class="headerlink" title="功能描述"></a>功能描述</h2><p>URemote是盛世辉科技有限公司自主研发的一套用于智能遥控终端和电视盒子进行实时通信的整体解决方案，URemote核心部分即URemoteService将在本文档中做详细说明，对于三方app厂商，URemote 是作为开放平台以URemoteSdk的方式，提供给其进行即成，二次开发。URemoteSdk介绍详见：</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/05/09/uremote/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/uremote_1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1823,6 +1443,183 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/uremote/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彧衡">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuHeng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/09/uremote/" itemprop="url">URemoteSdk 开发文档</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T23:44:13+08:00">
+                2017-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  1,082
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h1 id="1-文档说明"><a href="#1-文档说明" class="headerlink" title="1 文档说明"></a>1 文档说明</h1><h2 id="功能描述"><a href="#功能描述" class="headerlink" title="功能描述"></a>功能描述</h2><p>URemote是盛世辉科技有限公司自主研发的一套用于智能遥控终端和电视盒子进行实时通信的整体解决方案，URemote核心部分即URemoteService将在本文档中做详细说明，对于三方app厂商，URemote 是作为开放平台以URemoteSdk的方式，提供给其进行即成，二次开发。URemoteSdk介绍详见：</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/09/uremote/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -1873,7 +1670,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2002,7 +1799,7 @@
 </div>
 <div class="theme-info">
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共20.6k字</span>
+  <span class="post-count">博客全站共20.5k字</span>
 </div>
 
 

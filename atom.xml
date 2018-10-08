@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-08T11:57:07.000Z</updated>
+  <updated>2018-10-08T12:30:31.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,36 +21,15 @@
     <link href="http://yoursite.com/2018/10/08/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8F%91%E5%B1%95/"/>
     <id>http://yoursite.com/2018/10/08/分布式系统的发展/</id>
     <published>2018-10-08T11:57:07.000Z</published>
-    <updated>2018-10-08T11:57:07.000Z</updated>
+    <updated>2018-10-08T12:30:31.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="分布式系统的发展"><a href="#分布式系统的发展" class="headerlink" title="分布式系统的发展"></a>分布式系统的发展</h1><p>分布式系统（确切地说，分布式计算机系统）已经从它开始的地方走了很长一段路。一开始，一台计算机一次只能执行一项特定任务。如果我们需要并行完成多个任务，我们需要并行运行多台计算机。但是并行运行它们不足以构建真正的分布式系统，因为它需要一种机制来在不同的计算机（或在这些计算机上运行的程序）之间进行通信。这种跨多台计算机交换（共享）数据的要求触发了面向消息的通信的想法，其中两台计算机使用包装数据的消息共享数据。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*PPhYX2C8oWtkaf73PgxRNA.png" alt="img"></p><p>然后是多任务操作系统和个人计算机的时代。使用Windows，Unix，Linux操作系统，可以在同一台计算机上运行多个任务。这允许分布式系统开发人员在通过消息传递连接的一台或几台计算机内构建和运行整个分布式系统，这导致了面向服务的体系结构（SOA），其中每个分布式系统都可以构建为集成一组服务，这些服务在一台计算机或多台计算机上运行，服务接口通过WSDL（用于SOAP）或WADL（用于REST）正确定义，服务使用者使用这些接口进行客户端实现。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*7G-UETsalVEDi55KuuUBqg.jpeg" alt="img"></p><p>随着计算能力和存储价格的降低，全世界的组织开始使用分布式系统和基于SOA的企业IT系统，一旦服务或系统的数量增加，这些服务的点对点连接就不再可扩展和可维护，这导致了集中式“服务总线”的概念，该服务总线通过集线器类型架构互连所有不同的系统，这个组件被称为ESB（企业服务总线），它充当语言翻译者或中间人，他们是一群谈论不同语言但又希望彼此交流的人，在企业中，语言类似于消息传递协议和消息传递格式，不同的系统用于它们的通信，该模型的主要优点是每个系统都可以构建服务器端和客户端实现，而无需担心连接系统的协议。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*v-OUrwj8_LrUDWqGnPFy5A.png" alt="img"></p><p>这个模型工作正常，即使在今天也能正常工作。随着万维网的普及和模型的简单性，基于REST的通信变得比基于SOAP的通信模型更受欢迎，这导致了基于应用程序编程接口（API）的REST模型通信的发展。由于REST模型的简单性，需要在标准REST API实现之上实现安全性（身份验证和授权），缓存，限制和监视类型功能等功能，不是单独在每个API上实现这些功能，而是需要有一个通用组件来在API之上应用这些功能，这一要求引领了API管理平台的发展，如今它已成为任何分布式系统的核心功能之一。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*4KVNUtr2H8idWP6ozdubzw.jpeg" alt="img"></p><p>然后是分布式系统的大爆炸时刻，基于互联网的公司如Facebook，谷歌，亚马逊，Netflix，LinkedIn，Twitter变得如此之大，以至于他们想要构建跨越多个地理位置和多个数据中心的分布式系统，这些类型的要求使技术重点转移到一切开始的地方，工程师们开始考虑单个计算机和单个程序的概念。他们不考虑将一台计算机视为一台计算机，而是考虑在同一台计算机中创建多台虚拟计算机的方法。这导致了虚拟机的想法，其中同一台计算机可以充当多台计算机并且并行运行它们，虽然这是一个很好的想法，但它并不是主机资源利用率的最佳选择。运行多个操作系统需要额外的资源，这些资源在同一操作系统中运行时不需要。</p><p>这导致了容器的概念，其中使用相同的主机操作系统内核（Linux）在单独的运行时上运行多个程序及其所需的依赖性，这个概念在Linux操作系统上已有一段时间了，随着基于容器的应用程序部署的引入，它变得越来越流行并得到了很大的改进。容器可以与虚拟机相同，而不会产生单独操作系统的开销。您可以将应用程序和所有相关依赖项放入容器映像中，并且可以在具有可以运行容器的主机操作系统的任何环境中运行，Docker和Rocket是2个流行的容器构建平台。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*THFw7Au1CS5YdkQC0mcXxA.jpeg" alt="img"></p><p>这为Netflix，LinkedIn，Twitter等组织提供了基础框架，以构建他们要求苛刻的多区域，多数据中心应用平台，</p><p>然而，这并非没有复杂性。基于容器的部署的微型特性带来了跨多个容器的平台维护和编排的复杂性，随着微服务架构（MSA）的发明，单片应用程序被划分为更小的微服务块，这些微服务能够执行整个服务的给定功能并部署在容器中（在大多数情况下），这为分布式系统生态系统带来了一系列不同的要求，使系统最终保持一致并相互通信而没有太多复杂性。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*S1kWdAuHYbxc7sUW7k-0hA.png" alt="img"></p><p>这些要求最终帮助工程师构建了一个容器编排系统，可用于维护较大的基于容器的部署的一致性。毫不奇怪，这个领域的突出技术来自谷歌，因为它的规模，他们构建了名为“Kubernetes”（a.k.a k8s）的容器编排平台，它成为大规模容器编排要求的事实标准，K8S允许工程师：</p><ul><li>在大型集群中运行容器</li><li>将数据中心视为一台计算机</li><li>服务之间的通信（在容器上运行）</li><li>自动扩展，在多个服务之间进行负载平衡</li></ul><p>Kubernetes和docker使应用程序员的生活更轻松，他们不再想让自己的心思考虑它在不同环境中的表现（操作系统，DEV，TEST，PROD等），因为他构建的容器图像在所有环境中运行几乎相同，因为所有依赖关系都被打包到其中。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*beBjM4Qrs3lP6pVXCsr8KQ.jpeg" alt="img"></p><p>但是，对于容器和编排框架，应该有一个管理这些服务器的团队，这意味着需要使用docker，kubernetes等技术来管理数据中心，以确保它对应用程序来说就像一台计算机一样。而不是你这样做，其他人如何为你管理那部分，</p><p>这正是无服务器架构所带来的，其中您的服务器将由亚马逊（Lambda），微软（Azure功能）或谷歌（云功能）等第三方云提供商进行管理。现在，分布式系统将由应用程序员编程，而底层基础架构管理将由云提供商完成。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;分布式系统的发展&quot;&gt;&lt;a href=&quot;#分布式系统的发展&quot; class=&quot;headerlink&quot; title=&quot;分布式系统的发展&quot;&gt;&lt;/a&gt;分布式系统的发展&lt;/h1&gt;&lt;p&gt;分布式系统（确切地说，分布式计算机系统）已经从它开始的地方走了很长一段路。一开始，一台计算机
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2018/07/13/spring%E6%A0%B8%E5%BF%83/"/>
-    <id>http://yoursite.com/2018/07/13/spring核心/</id>
-    <published>2018-07-13T03:01:31.000Z</published>
-    <updated>2018-07-13T03:01:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: spring 理解</span><br></pre></td></tr></table></figure><h1 id="spring核心"><a href="#spring核心" class="headerlink" title="spring核心"></a>spring核心</h1><ul><li><p>Di</p><blockquote><p>bean 装配：</p><ul><li>XML显示装配</li><li>java 显示装配</li><li>自动装配 <ul><li>Component scanning</li><li>auto writing</li></ul></li></ul></blockquote></li><li><p>aop</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 知识点</span><br><span class="line">date: 2018-10-08 15:22:10</span><br><span class="line">tags: </span><br><span class="line">- 知识点</span><br><span class="line">categories: </span><br><span class="line">- 经验</span><br></pre></td></tr></table></figure><h1 id="分布式系统的发展"><a href="#分布式系统的发展" class="headerlink" title="分布式系统的发展"></a>分布式系统的发展</h1><p>分布式系统（确切地说，分布式计算机系统）已经从它开始的地方走了很长一段路。一开始，一台计算机一次只能执行一项特定任务。如果我们需要并行完成多个任务，我们需要并行运行多台计算机。但是并行运行它们不足以构建真正的分布式系统，因为它需要一种机制来在不同的计算机（或在这些计算机上运行的程序）之间进行通信。这种跨多台计算机交换（共享）数据的要求触发了面向消息的通信的想法，其中两台计算机使用包装数据的消息共享数据。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*PPhYX2C8oWtkaf73PgxRNA.png" alt="img"></p><p>然后是多任务操作系统和个人计算机的时代。使用Windows，Unix，Linux操作系统，可以在同一台计算机上运行多个任务。这允许分布式系统开发人员在通过消息传递连接的一台或几台计算机内构建和运行整个分布式系统，这导致了面向服务的体系结构（SOA），其中每个分布式系统都可以构建为集成一组服务，这些服务在一台计算机或多台计算机上运行，服务接口通过WSDL（用于SOAP）或WADL（用于REST）正确定义，服务使用者使用这些接口进行客户端实现。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*7G-UETsalVEDi55KuuUBqg.jpeg" alt="img"></p><p>随着计算能力和存储价格的降低，全世界的组织开始使用分布式系统和基于SOA的企业IT系统，一旦服务或系统的数量增加，这些服务的点对点连接就不再可扩展和可维护，这导致了集中式“服务总线”的概念，该服务总线通过集线器类型架构互连所有不同的系统，这个组件被称为ESB（企业服务总线），它充当语言翻译者或中间人，他们是一群谈论不同语言但又希望彼此交流的人，在企业中，语言类似于消息传递协议和消息传递格式，不同的系统用于它们的通信，该模型的主要优点是每个系统都可以构建服务器端和客户端实现，而无需担心连接系统的协议。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*v-OUrwj8_LrUDWqGnPFy5A.png" alt="img"></p><p>这个模型工作正常，即使在今天也能正常工作。随着万维网的普及和模型的简单性，基于REST的通信变得比基于SOAP的通信模型更受欢迎，这导致了基于应用程序编程接口（API）的REST模型通信的发展。由于REST模型的简单性，需要在标准REST API实现之上实现安全性（身份验证和授权），缓存，限制和监视类型功能等功能，不是单独在每个API上实现这些功能，而是需要有一个通用组件来在API之上应用这些功能，这一要求引领了API管理平台的发展，如今它已成为任何分布式系统的核心功能之一。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*4KVNUtr2H8idWP6ozdubzw.jpeg" alt="img"></p><p>然后是分布式系统的大爆炸时刻，基于互联网的公司如Facebook，谷歌，亚马逊，Netflix，LinkedIn，Twitter变得如此之大，以至于他们想要构建跨越多个地理位置和多个数据中心的分布式系统，这些类型的要求使技术重点转移到一切开始的地方，工程师们开始考虑单个计算机和单个程序的概念。他们不考虑将一台计算机视为一台计算机，而是考虑在同一台计算机中创建多台虚拟计算机的方法。这导致了虚拟机的想法，其中同一台计算机可以充当多台计算机并且并行运行它们，虽然这是一个很好的想法，但它并不是主机资源利用率的最佳选择。运行多个操作系统需要额外的资源，这些资源在同一操作系统中运行时不需要。</p><p>这导致了容器的概念，其中使用相同的主机操作系统内核（Linux）在单独的运行时上运行多个程序及其所需的依赖性，这个概念在Linux操作系统上已有一段时间了，随着基于容器的应用程序部署的引入，它变得越来越流行并得到了很大的改进。容器可以与虚拟机相同，而不会产生单独操作系统的开销。您可以将应用程序和所有相关依赖项放入容器映像中，并且可以在具有可以运行容器的主机操作系统的任何环境中运行，Docker和Rocket是2个流行的容器构建平台。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*THFw7Au1CS5YdkQC0mcXxA.jpeg" alt="img"></p><p>这为Netflix，LinkedIn，Twitter等组织提供了基础框架，以构建他们要求苛刻的多区域，多数据中心应用平台，</p><p>然而，这并非没有复杂性。基于容器的部署的微型特性带来了跨多个容器的平台维护和编排的复杂性，随着微服务架构（MSA）的发明，单片应用程序被划分为更小的微服务块，这些微服务能够执行整个服务的给定功能并部署在容器中（在大多数情况下），这为分布式系统生态系统带来了一系列不同的要求，使系统最终保持一致并相互通信而没有太多复杂性。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*S1kWdAuHYbxc7sUW7k-0hA.png" alt="img"></p><p>这些要求最终帮助工程师构建了一个容器编排系统，可用于维护较大的基于容器的部署的一致性。毫不奇怪，这个领域的突出技术来自谷歌，因为它的规模，他们构建了名为“Kubernetes”（a.k.a k8s）的容器编排平台，它成为大规模容器编排要求的事实标准，K8S允许工程师：</p><ul><li>在大型集群中运行容器</li><li>将数据中心视为一台计算机</li><li>服务之间的通信（在容器上运行）</li><li>自动扩展，在多个服务之间进行负载平衡</li></ul><p>Kubernetes和docker使应用程序员的生活更轻松，他们不再想让自己的心思考虑它在不同环境中的表现（操作系统，DEV，TEST，PROD等），因为他构建的容器图像在所有环境中运行几乎相同，因为所有依赖关系都被打包到其中。</p><p><img src="https://cdn-images-1.medium.com/max/1600/1*beBjM4Qrs3lP6pVXCsr8KQ.jpeg" alt="img"></p><p>但是，对于容器和编排框架，应该有一个管理这些服务器的团队，这意味着需要使用docker，kubernetes等技术来管理数据中心，以确保它对应用程序来说就像一台计算机一样。而不是你这样做，其他人如何为你管理那部分，</p><p>这正是无服务器架构所带来的，其中您的服务器将由亚马逊（Lambda），微软（Azure功能）或谷歌（云功能）等第三方云提供商进行管理。现在，分布式系统将由应用程序员编程，而底层基础架构管理将由云提供商完成。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span cla
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
       
     
     </summary>
@@ -428,28 +407,6 @@
   </entry>
   
   <entry>
-    <title>URemoteSdk 开发文档</title>
-    <link href="http://yoursite.com/2017/05/09/uremote/"/>
-    <id>http://yoursite.com/2017/05/09/uremote/</id>
-    <published>2017-05-09T15:44:13.000Z</published>
-    <updated>2018-05-15T08:26:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h1 id="1-文档说明"><a href="#1-文档说明" class="headerlink" title="1 文档说明"></a>1 文档说明</h1><h2 id="功能描述"><a href="#功能描述" class="headerlink" title="功能描述"></a>功能描述</h2><p>URemote是盛世辉科技有限公司自主研发的一套用于智能遥控终端和电视盒子进行实时通信的整体解决方案，URemote核心部分即URemoteService将在本文档中做详细说明，对于三方app厂商，URemote 是作为开放平台以URemoteSdk的方式，提供给其进行即成，二次开发。URemoteSdk介绍详见：</p><a id="more"></a> <p><strong>URemoteSdk接口文档_V1.0.doc</strong></p><h2 id="阅读对象"><a href="#阅读对象" class="headerlink" title="阅读对象"></a>阅读对象</h2><p>本文档面向盛世辉内部研发经理，研发工程师。该人员需要具备一定的Android开发能力，只允许在公司内部流转。</p><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><hr><p>  名词             解释</p><ul><li>URemoteSdk       APP层和URemoteService交互API,URemoteSdk会针对遥控器和盒子两端分别给出API接入说明，下文中如无特殊说明，C_URemoteSdk代指遥控端接入API，S_URemoteSdk代值盒子端接入API</li><li>URemoteService   开发人员只需了解该服务在整个框架中得位置及意义，同理，如无特殊说明，C_URemoteService代指遥控端服务，S_URemoteService代指盒子端服务</li><li>请求             通过AIDL/PROTOBUF协议把数据发送给接收方的过程。</li><li>通知             一般指盒子端主动推送给遥控器端得消息类型，比如当前处于什么模式（重绘，镜像，还是异步）</li><li>返回             遥控端发送操控指令给盒子有两种接入模式，同步或者异步，具体下文会具体描述</li><li>心跳             开发人员只做了解，具体代值遥控和盒子通讯机制</li></ul><hr><h1 id="URemote整体架构及URemoteService"><a href="#URemote整体架构及URemoteService" class="headerlink" title="URemote整体架构及URemoteService"></a>URemote整体架构及URemoteService</h1><p>系统架构及历史演进：</p><p><img src="http://p8kn4m8eo.bkt.clouddn.com/uremote.jpg" alt=""></p><p>以上架构图是产品初始设计，可以看到，目前最终实现基本未脱离此结构设计，而实际变动部分会在以下内容中说明缘由，框架中，RemoteService是该架构中的核心部分，向上以sdk的方式，给应用层app提供接入指南，向下以本地库为依赖。</p><p>RemoteService：提供重绘服务(EventService)，镜像服务(ScreenService)，以及同屏基础设置，</p><p>具体名称以实际代码为准。目前代码实现层面上，RemoteService，只提供了对应服务，没有提供对应的设置页面，之后应该在这方面有所补充，例如，提供镜像参数的设置，服务端口的设置等。</p><p>通信原本定义基于TCP的socket形式进行，目前是采用开源工程AndroidAsync，具体请参考：</p><p><a href="https://github.com/koush/AndroidAsync" target="_blank" rel="noopener">https://github.com/koush/AndroidAsync</a>以websocket形式实现，产品原定义的核心的touch消息，镜像协议，是想以so库的形式，这个可能是我们平台作为产品形式，最后从性能，稳定性等方面最终实现的交互方式（参考资料： <a href="https://openstf.io/" target="_blank" rel="noopener">https://openstf.io/</a>）</p><p>目前产品架构：</p><p><img src="http://p8kn4m8eo.bkt.clouddn.com/uremote_1.png" alt=""></p><p>图中，镜像部分应该是直接和盒子uremoteservice进行通信，这里没有画出跨层通信的交互。镜像部分具体请徐工补充完整。App层和service通过提供的api进行通信，通信方式aidl.</p><p>Service之间通过websocket通信，通信协议protobuf。</p><h2 id="URemoteService"><a href="#URemoteService" class="headerlink" title="URemoteService"></a>URemoteService</h2><p>URemoteService 中的模块（客户端和服务端基本一样，这里只介绍相对复杂一点的遥控客户端，具体差异请参考源代码）</p><ul><li>WatchDog</li></ul><p>watchdog 的实现是基于alarm机制，定时监测服务是否存活，主要实现功能uremoteservice保活，android里保活机制有很多种：</p><ol><li><p>有系统权限，内置rom，可以init启动，自动保活</p></li><li><p>alarm机制，类似看门狗实现</p></li><li><p>双service互保</p></li></ol><p>我们版本目前采用第二种，之后可以根据我们产品特点进行调整。</p><ul><li>websocket：</li></ul><blockquote><p>采用开源AndroidAsync，具体请参考上文提到的参考链接。重绘端口：6059,镜像端口：6060</p></blockquote><ul><li>protobuf:</li></ul><blockquote><p>具体请参考另一篇关于uremoteSdk的介绍</p></blockquote><ul><li>heartbeat:</li></ul><blockquote><p>心跳包，按照AndroidAsync官网建议，采用tcp ping 机制发送固定心跳字断</p></blockquote><ul><li>coreservice</li></ul><blockquote><p>向上提供aidl接口，水平service通信提供websocket接口路由</p></blockquote><ul><li>http</li></ul><blockquote><p>新增协议，主要提供一些同步查询接口，具体请黄海，志臣在uremoteSdk中补充</p></blockquote><ul><li>设备发现</li></ul><blockquote><p>结构图中，遗漏了设备发现功能，设备发现通过服务器发送组播，客户端扫描发送udp包建立握手，获取盒子IP.</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h1&gt;&lt;h1 id=&quot;1-文档说明&quot;&gt;&lt;a href=&quot;#1-文档说明&quot; class=&quot;headerlink&quot; title=&quot;1 文档说明&quot;&gt;&lt;/a&gt;1 文档说明&lt;/h1&gt;&lt;h2 id=&quot;功能描述&quot;&gt;&lt;a href=&quot;#功能描述&quot; class=&quot;headerlink&quot; title=&quot;功能描述&quot;&gt;&lt;/a&gt;功能描述&lt;/h2&gt;&lt;p&gt;URemote是盛世辉科技有限公司自主研发的一套用于智能遥控终端和电视盒子进行实时通信的整体解决方案，URemote核心部分即URemoteService将在本文档中做详细说明，对于三方app厂商，URemote 是作为开放平台以URemoteSdk的方式，提供给其进行即成，二次开发。URemoteSdk介绍详见：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
     <title>URemoteSdk接口文档</title>
     <link href="http://yoursite.com/2017/05/09/uremote_1/"/>
     <id>http://yoursite.com/2017/05/09/uremote_1/</id>
@@ -513,6 +470,28 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h1 id=&quot;1-文档说明&quot;&gt;&lt;a href=&quot;#1-文档说明&quot; class=&quot;headerlink&quot; title=&quot;1 文档说明&quot;&gt;&lt;/a&gt;1 文档说明&lt;/h1&gt;&lt;h2 id=&quot;1-1-功能描述&quot;&gt;&lt;a href=&quot;#1-1-功能描述&quot; class=&quot;headerlink&quot; title=&quot;1.1 功能描述&quot;&gt;&lt;/a&gt;1.1 功能描述&lt;/h2&gt;&lt;p&gt;URemoteSdk 是盛世辉科技有限公司提供得一套针对电视盒子和盛世辉遥控器进行网络自定义指令通信方案。第三方盒子APP通过该sdk得接入，可以很放便的通过遥控器操控盒子，实现一些传统遥控器不可有的一些用户操作体验。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>URemoteSdk 开发文档</title>
+    <link href="http://yoursite.com/2017/05/09/uremote/"/>
+    <id>http://yoursite.com/2017/05/09/uremote/</id>
+    <published>2017-05-09T15:44:13.000Z</published>
+    <updated>2018-05-15T08:26:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h1 id="1-文档说明"><a href="#1-文档说明" class="headerlink" title="1 文档说明"></a>1 文档说明</h1><h2 id="功能描述"><a href="#功能描述" class="headerlink" title="功能描述"></a>功能描述</h2><p>URemote是盛世辉科技有限公司自主研发的一套用于智能遥控终端和电视盒子进行实时通信的整体解决方案，URemote核心部分即URemoteService将在本文档中做详细说明，对于三方app厂商，URemote 是作为开放平台以URemoteSdk的方式，提供给其进行即成，二次开发。URemoteSdk介绍详见：</p><a id="more"></a> <p><strong>URemoteSdk接口文档_V1.0.doc</strong></p><h2 id="阅读对象"><a href="#阅读对象" class="headerlink" title="阅读对象"></a>阅读对象</h2><p>本文档面向盛世辉内部研发经理，研发工程师。该人员需要具备一定的Android开发能力，只允许在公司内部流转。</p><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><hr><p>  名词             解释</p><ul><li>URemoteSdk       APP层和URemoteService交互API,URemoteSdk会针对遥控器和盒子两端分别给出API接入说明，下文中如无特殊说明，C_URemoteSdk代指遥控端接入API，S_URemoteSdk代值盒子端接入API</li><li>URemoteService   开发人员只需了解该服务在整个框架中得位置及意义，同理，如无特殊说明，C_URemoteService代指遥控端服务，S_URemoteService代指盒子端服务</li><li>请求             通过AIDL/PROTOBUF协议把数据发送给接收方的过程。</li><li>通知             一般指盒子端主动推送给遥控器端得消息类型，比如当前处于什么模式（重绘，镜像，还是异步）</li><li>返回             遥控端发送操控指令给盒子有两种接入模式，同步或者异步，具体下文会具体描述</li><li>心跳             开发人员只做了解，具体代值遥控和盒子通讯机制</li></ul><hr><h1 id="URemote整体架构及URemoteService"><a href="#URemote整体架构及URemoteService" class="headerlink" title="URemote整体架构及URemoteService"></a>URemote整体架构及URemoteService</h1><p>系统架构及历史演进：</p><p><img src="http://p8kn4m8eo.bkt.clouddn.com/uremote.jpg" alt=""></p><p>以上架构图是产品初始设计，可以看到，目前最终实现基本未脱离此结构设计，而实际变动部分会在以下内容中说明缘由，框架中，RemoteService是该架构中的核心部分，向上以sdk的方式，给应用层app提供接入指南，向下以本地库为依赖。</p><p>RemoteService：提供重绘服务(EventService)，镜像服务(ScreenService)，以及同屏基础设置，</p><p>具体名称以实际代码为准。目前代码实现层面上，RemoteService，只提供了对应服务，没有提供对应的设置页面，之后应该在这方面有所补充，例如，提供镜像参数的设置，服务端口的设置等。</p><p>通信原本定义基于TCP的socket形式进行，目前是采用开源工程AndroidAsync，具体请参考：</p><p><a href="https://github.com/koush/AndroidAsync" target="_blank" rel="noopener">https://github.com/koush/AndroidAsync</a>以websocket形式实现，产品原定义的核心的touch消息，镜像协议，是想以so库的形式，这个可能是我们平台作为产品形式，最后从性能，稳定性等方面最终实现的交互方式（参考资料： <a href="https://openstf.io/" target="_blank" rel="noopener">https://openstf.io/</a>）</p><p>目前产品架构：</p><p><img src="http://p8kn4m8eo.bkt.clouddn.com/uremote_1.png" alt=""></p><p>图中，镜像部分应该是直接和盒子uremoteservice进行通信，这里没有画出跨层通信的交互。镜像部分具体请徐工补充完整。App层和service通过提供的api进行通信，通信方式aidl.</p><p>Service之间通过websocket通信，通信协议protobuf。</p><h2 id="URemoteService"><a href="#URemoteService" class="headerlink" title="URemoteService"></a>URemoteService</h2><p>URemoteService 中的模块（客户端和服务端基本一样，这里只介绍相对复杂一点的遥控客户端，具体差异请参考源代码）</p><ul><li>WatchDog</li></ul><p>watchdog 的实现是基于alarm机制，定时监测服务是否存活，主要实现功能uremoteservice保活，android里保活机制有很多种：</p><ol><li><p>有系统权限，内置rom，可以init启动，自动保活</p></li><li><p>alarm机制，类似看门狗实现</p></li><li><p>双service互保</p></li></ol><p>我们版本目前采用第二种，之后可以根据我们产品特点进行调整。</p><ul><li>websocket：</li></ul><blockquote><p>采用开源AndroidAsync，具体请参考上文提到的参考链接。重绘端口：6059,镜像端口：6060</p></blockquote><ul><li>protobuf:</li></ul><blockquote><p>具体请参考另一篇关于uremoteSdk的介绍</p></blockquote><ul><li>heartbeat:</li></ul><blockquote><p>心跳包，按照AndroidAsync官网建议，采用tcp ping 机制发送固定心跳字断</p></blockquote><ul><li>coreservice</li></ul><blockquote><p>向上提供aidl接口，水平service通信提供websocket接口路由</p></blockquote><ul><li>http</li></ul><blockquote><p>新增协议，主要提供一些同步查询接口，具体请黄海，志臣在uremoteSdk中补充</p></blockquote><ul><li>设备发现</li></ul><blockquote><p>结构图中，遗漏了设备发现功能，设备发现通过服务器发送组播，客户端扫描发送udp包建立握手，获取盒子IP.</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h1&gt;&lt;h1 id=&quot;1-文档说明&quot;&gt;&lt;a href=&quot;#1-文档说明&quot; class=&quot;headerlink&quot; title=&quot;1 文档说明&quot;&gt;&lt;/a&gt;1 文档说明&lt;/h1&gt;&lt;h2 id=&quot;功能描述&quot;&gt;&lt;a href=&quot;#功能描述&quot; class=&quot;headerlink&quot; title=&quot;功能描述&quot;&gt;&lt;/a&gt;功能描述&lt;/h2&gt;&lt;p&gt;URemote是盛世辉科技有限公司自主研发的一套用于智能遥控终端和电视盒子进行实时通信的整体解决方案，URemote核心部分即URemoteService将在本文档中做详细说明，对于三方app厂商，URemote 是作为开放平台以URemoteSdk的方式，提供给其进行即成，二次开发。URemoteSdk介绍详见：&lt;/p&gt;
     
     </summary>
     

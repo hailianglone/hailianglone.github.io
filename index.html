@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,822
+                  1,846
                 </span>
               
 
@@ -442,7 +442,8 @@
       
         
           
-            <h1 id="分布式系统的发展"><a href="#分布式系统的发展" class="headerlink" title="分布式系统的发展"></a>分布式系统的发展</h1><p>分布式系统（确切地说，分布式计算机系统）已经从它开始的地方走了很长一段路。一开始，一台计算机一次只能执行一项特定任务。如果我们需要并行完成多个任务，我们需要并行运行多台计算机。但是并行运行它们不足以构建真正的分布式系统，因为它需要一种机制来在不同的计算机（或在这些计算机上运行的程序）之间进行通信。这种跨多台计算机交换（共享）数据的要求触发了面向消息的通信的想法，其中两台计算机使用包装数据的消息共享数据。</p>
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 知识点</span><br><span class="line">date: 2018-10-08 15:22:10</span><br><span class="line">tags: </span><br><span class="line">- 知识点</span><br><span class="line">categories: </span><br><span class="line">- 经验</span><br></pre></td></tr></table></figure>
+<h1 id="分布式系统的发展"><a href="#分布式系统的发展" class="headerlink" title="分布式系统的发展"></a>分布式系统的发展</h1><p>分布式系统（确切地说，分布式计算机系统）已经从它开始的地方走了很长一段路。一开始，一台计算机一次只能执行一项特定任务。如果我们需要并行完成多个任务，我们需要并行运行多台计算机。但是并行运行它们不足以构建真正的分布式系统，因为它需要一种机制来在不同的计算机（或在这些计算机上运行的程序）之间进行通信。这种跨多台计算机交换（共享）数据的要求触发了面向消息的通信的想法，其中两台计算机使用包装数据的消息共享数据。</p>
 <p><img src="https://cdn-images-1.medium.com/max/1600/1*PPhYX2C8oWtkaf73PgxRNA.png" alt="img"></p>
 <p>然后是多任务操作系统和个人计算机的时代。使用Windows，Unix，Linux操作系统，可以在同一台计算机上运行多个任务。这允许分布式系统开发人员在通过消息传递连接的一台或几台计算机内构建和运行整个分布式系统，这导致了面向服务的体系结构（SOA），其中每个分布式系统都可以构建为集成一组服务，这些服务在一台计算机或多台计算机上运行，服务接口通过WSDL（用于SOAP）或WADL（用于REST）正确定义，服务使用者使用这些接口进行客户端实现。</p>
 <p><img src="https://cdn-images-1.medium.com/max/1600/1*7G-UETsalVEDi55KuuUBqg.jpeg" alt="img"></p>
@@ -467,175 +468,6 @@
 <p><img src="https://cdn-images-1.medium.com/max/1600/1*beBjM4Qrs3lP6pVXCsr8KQ.jpeg" alt="img"></p>
 <p>但是，对于容器和编排框架，应该有一个管理这些服务器的团队，这意味着需要使用docker，kubernetes等技术来管理数据中心，以确保它对应用程序来说就像一台计算机一样。而不是你这样做，其他人如何为你管理那部分，</p>
 <p>这正是无服务器架构所带来的，其中您的服务器将由亚马逊（Lambda），微软（Azure功能）或谷歌（云功能）等第三方云提供商进行管理。现在，分布式系统将由应用程序员编程，而底层基础架构管理将由云提供商完成。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/13/spring核心/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="彧衡">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuHeng">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/13/spring核心/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T11:01:31+08:00">
-                2018-07-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  31
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: spring 理解</span><br></pre></td></tr></table></figure>
-<h1 id="spring核心"><a href="#spring核心" class="headerlink" title="spring核心"></a>spring核心</h1><ul>
-<li><p>Di</p>
-<blockquote>
-<p>bean 装配：</p>
-<ul>
-<li>XML显示装配</li>
-<li>java 显示装配</li>
-<li>自动装配 <ul>
-<li>Component scanning</li>
-<li>auto writing</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-</li>
-<li><p>aop</p>
-</li>
-</ul>
 
           
         
@@ -2098,6 +1930,209 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/13/安全/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彧衡">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuHeng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/13/安全/" itemprop="url">服务安全</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-13T18:23:12+08:00">
+                2018-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/经验/" itemprop="url" rel="index">
+                    <span itemprop="name">经验</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  555
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h1><h2 id="存储相关"><a href="#存储相关" class="headerlink" title="存储相关"></a>存储相关</h2><ul>
+<li style="list-style: none"><input type="checkbox"> 数据库仅支持内网访问 </li>
+<li style="list-style: none"><input type="checkbox"> 数据库驱动帐号，密码配置文件，通过AES加密处理，使用时动态解密处理</li>
+<li style="list-style: none"><input type="checkbox"> 数据库密码复杂度要至少包含大小写字母，特殊符号及数字，8位以上</li>
+<li style="list-style: none"><input type="checkbox"> 数据库做读写分离，针对读库和写库分别配置不同的权限帐号</li>
+<li style="list-style: none"><input type="checkbox"> 数据库管理员帐号，密码只对DBA负责人开放</li>
+<li style="list-style: none"><input type="checkbox"> 数据库敏感信息，如用户手机号，商户信息等持久化和反序列化采用AES等相关加密算法进行处理</li>
+<li style="list-style: none"><input type="checkbox"> 数据库性能指标TPS,要根据相关业务和用户使用量，进行设计和规划基准测试，比如用sysbench分别进行cpu的基准测试和i/o的基准测试，有条件的话，可以拿dump生产环境进行压力测试</li>
+<li style="list-style: none"><input type="checkbox"> 数据库sql语句使用要避免可以进行sql注入攻击的拼写方法</li>
+<li style="list-style: none"><input type="checkbox"> 数据库关键信息，要分别支持冷备和热备</li>
+</ul>
+<h2 id="应用服务和负载均衡"><a href="#应用服务和负载均衡" class="headerlink" title="应用服务和负载均衡"></a>应用服务和负载均衡</h2><ul>
+<li style="list-style: none"><input type="checkbox"> Https支持</li>
+<li style="list-style: none"><input type="checkbox"> 如果是平台接入，iptables要设置访问白名单</li>
+<li style="list-style: none"><input type="checkbox"> 应用服务部署单独分配部署帐号，不采用root用户</li>
+<li style="list-style: none"><input type="checkbox"> 核心应用服务尽量和其他应用服务分离</li>
+<li style="list-style: none"><input type="checkbox"> 请求和返回进行加签和验签处理</li>
+<li style="list-style: none"><input type="checkbox"> 某些业务请求要保证幂等性（分布式锁，或者数据库支持等）</li>
+<li style="list-style: none"><input type="checkbox"> 后台应用服务，进行严格权限管理</li>
+<li style="list-style: none"><input type="checkbox"> 防止频繁相同请求恶意攻击（例如，可以简单的过滤器实现）</li>
+<li style="list-style: none"><input type="checkbox"> 后台管理页面要防止js注入，中间人劫持等攻击</li>
+<li style="list-style: none"><input type="checkbox"> 进行模拟ddos攻击测试</li>
+<li style="list-style: none"><input type="checkbox"> 应用日志要严格控制敏感信息和日志等级处理</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li style="list-style: none"><input type="checkbox"> 保证高可用，无论存储服务，应用服务，负载分发服务一定要保证多节点部署</li>
+<li style="list-style: none"><input type="checkbox"> 保证高并发，无论存储服务，应用服务，负载分发服务一定要保证容易水平扩展</li>
+<li style="list-style: none"><input type="checkbox"> 保证网络稳定性，做好多运营商节点部署功能</li>
+<li style="list-style: none"><input type="checkbox"> 支持热部署，及灰度发布</li>
+</ul>
+<p>d</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -2148,7 +2183,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2277,7 +2312,7 @@
 </div>
 <div class="theme-info">
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共20.6k字</span>
+  <span class="post-count">博客全站共20.5k字</span>
 </div>
 
 
