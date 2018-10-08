@@ -340,6 +340,504 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/08/分布式系统的发展/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彧衡">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuHeng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/08/分布式系统的发展/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T19:57:07+08:00">
+                2018-10-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  1,822
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="分布式系统的发展"><a href="#分布式系统的发展" class="headerlink" title="分布式系统的发展"></a>分布式系统的发展</h1><p>分布式系统（确切地说，分布式计算机系统）已经从它开始的地方走了很长一段路。一开始，一台计算机一次只能执行一项特定任务。如果我们需要并行完成多个任务，我们需要并行运行多台计算机。但是并行运行它们不足以构建真正的分布式系统，因为它需要一种机制来在不同的计算机（或在这些计算机上运行的程序）之间进行通信。这种跨多台计算机交换（共享）数据的要求触发了面向消息的通信的想法，其中两台计算机使用包装数据的消息共享数据。</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*PPhYX2C8oWtkaf73PgxRNA.png" alt="img"></p>
+<p>然后是多任务操作系统和个人计算机的时代。使用Windows，Unix，Linux操作系统，可以在同一台计算机上运行多个任务。这允许分布式系统开发人员在通过消息传递连接的一台或几台计算机内构建和运行整个分布式系统，这导致了面向服务的体系结构（SOA），其中每个分布式系统都可以构建为集成一组服务，这些服务在一台计算机或多台计算机上运行，服务接口通过WSDL（用于SOAP）或WADL（用于REST）正确定义，服务使用者使用这些接口进行客户端实现。</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*7G-UETsalVEDi55KuuUBqg.jpeg" alt="img"></p>
+<p>随着计算能力和存储价格的降低，全世界的组织开始使用分布式系统和基于SOA的企业IT系统，一旦服务或系统的数量增加，这些服务的点对点连接就不再可扩展和可维护，这导致了集中式“服务总线”的概念，该服务总线通过集线器类型架构互连所有不同的系统，这个组件被称为ESB（企业服务总线），它充当语言翻译者或中间人，他们是一群谈论不同语言但又希望彼此交流的人，在企业中，语言类似于消息传递协议和消息传递格式，不同的系统用于它们的通信，该模型的主要优点是每个系统都可以构建服务器端和客户端实现，而无需担心连接系统的协议。</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*v-OUrwj8_LrUDWqGnPFy5A.png" alt="img"></p>
+<p>这个模型工作正常，即使在今天也能正常工作。随着万维网的普及和模型的简单性，基于REST的通信变得比基于SOAP的通信模型更受欢迎，这导致了基于应用程序编程接口（API）的REST模型通信的发展。由于REST模型的简单性，需要在标准REST API实现之上实现安全性（身份验证和授权），缓存，限制和监视类型功能等功能，不是单独在每个API上实现这些功能，而是需要有一个通用组件来在API之上应用这些功能，这一要求引领了API管理平台的发展，如今它已成为任何分布式系统的核心功能之一。</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*4KVNUtr2H8idWP6ozdubzw.jpeg" alt="img"></p>
+<p>然后是分布式系统的大爆炸时刻，基于互联网的公司如Facebook，谷歌，亚马逊，Netflix，LinkedIn，Twitter变得如此之大，以至于他们想要构建跨越多个地理位置和多个数据中心的分布式系统，这些类型的要求使技术重点转移到一切开始的地方，工程师们开始考虑单个计算机和单个程序的概念。他们不考虑将一台计算机视为一台计算机，而是考虑在同一台计算机中创建多台虚拟计算机的方法。这导致了虚拟机的想法，其中同一台计算机可以充当多台计算机并且并行运行它们，虽然这是一个很好的想法，但它并不是主机资源利用率的最佳选择。运行多个操作系统需要额外的资源，这些资源在同一操作系统中运行时不需要。</p>
+<p>这导致了容器的概念，其中使用相同的主机操作系统内核（Linux）在单独的运行时上运行多个程序及其所需的依赖性，这个概念在Linux操作系统上已有一段时间了，随着基于容器的应用程序部署的引入，它变得越来越流行并得到了很大的改进。容器可以与虚拟机相同，而不会产生单独操作系统的开销。您可以将应用程序和所有相关依赖项放入容器映像中，并且可以在具有可以运行容器的主机操作系统的任何环境中运行，Docker和Rocket是2个流行的容器构建平台。</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*THFw7Au1CS5YdkQC0mcXxA.jpeg" alt="img"></p>
+<p>这为Netflix，LinkedIn，Twitter等组织提供了基础框架，以构建他们要求苛刻的多区域，多数据中心应用平台，</p>
+<p>然而，这并非没有复杂性。基于容器的部署的微型特性带来了跨多个容器的平台维护和编排的复杂性，随着微服务架构（MSA）的发明，单片应用程序被划分为更小的微服务块，这些微服务能够执行整个服务的给定功能并部署在容器中（在大多数情况下），这为分布式系统生态系统带来了一系列不同的要求，使系统最终保持一致并相互通信而没有太多复杂性。</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*S1kWdAuHYbxc7sUW7k-0hA.png" alt="img"></p>
+<p>这些要求最终帮助工程师构建了一个容器编排系统，可用于维护较大的基于容器的部署的一致性。毫不奇怪，这个领域的突出技术来自谷歌，因为它的规模，他们构建了名为“Kubernetes”（a.k.a k8s）的容器编排平台，它成为大规模容器编排要求的事实标准，K8S允许工程师：</p>
+<ul>
+<li>在大型集群中运行容器</li>
+<li>将数据中心视为一台计算机</li>
+<li>服务之间的通信（在容器上运行）</li>
+<li>自动扩展，在多个服务之间进行负载平衡</li>
+</ul>
+<p>Kubernetes和docker使应用程序员的生活更轻松，他们不再想让自己的心思考虑它在不同环境中的表现（操作系统，DEV，TEST，PROD等），因为他构建的容器图像在所有环境中运行几乎相同，因为所有依赖关系都被打包到其中。</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*beBjM4Qrs3lP6pVXCsr8KQ.jpeg" alt="img"></p>
+<p>但是，对于容器和编排框架，应该有一个管理这些服务器的团队，这意味着需要使用docker，kubernetes等技术来管理数据中心，以确保它对应用程序来说就像一台计算机一样。而不是你这样做，其他人如何为你管理那部分，</p>
+<p>这正是无服务器架构所带来的，其中您的服务器将由亚马逊（Lambda），微软（Azure功能）或谷歌（云功能）等第三方云提供商进行管理。现在，分布式系统将由应用程序员编程，而底层基础架构管理将由云提供商完成。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/13/spring核心/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彧衡">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuHeng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/13/spring核心/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T11:01:31+08:00">
+                2018-07-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  31
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: spring 理解</span><br></pre></td></tr></table></figure>
+<h1 id="spring核心"><a href="#spring核心" class="headerlink" title="spring核心"></a>spring核心</h1><ul>
+<li><p>Di</p>
+<blockquote>
+<p>bean 装配：</p>
+<ul>
+<li>XML显示装配</li>
+<li>java 显示装配</li>
+<li>自动装配 <ul>
+<li>Component scanning</li>
+<li>auto writing</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>aop</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/11/约定大于配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="彧衡">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuHeng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/11/约定大于配置/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-11T16:51:25+08:00">
+                2018-07-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  19
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="约定大于配置"><a href="#约定大于配置" class="headerlink" title="约定大于配置"></a>约定大于配置</h1><ul>
+<li>git 提交模版统一</li>
+<li>注释模版统一</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/22/algorithm_1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1516,7 +2014,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,963
+                  1,975
                 </span>
               
 
@@ -1563,564 +2061,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/05/13/resume/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/13/安全/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="彧衡">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuHeng">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/13/安全/" itemprop="url">服务安全</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-13T18:23:12+08:00">
-                2018-05-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/经验/" itemprop="url" rel="index">
-                    <span itemprop="name">经验</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  554
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h1><h2 id="存储相关"><a href="#存储相关" class="headerlink" title="存储相关"></a>存储相关</h2><ul>
-<li style="list-style: none"><input type="checkbox"> 数据库仅支持内网访问 </li>
-<li style="list-style: none"><input type="checkbox"> 数据库驱动帐号，密码配置文件，通过AES加密处理，使用时动态解密处理</li>
-<li style="list-style: none"><input type="checkbox"> 数据库密码复杂度要至少包含大小写字母，特殊符号及数字，8位以上</li>
-<li style="list-style: none"><input type="checkbox"> 数据库做读写分离，针对读库和写库分别配置不同的权限帐号</li>
-<li style="list-style: none"><input type="checkbox"> 数据库管理员帐号，密码只对DBA负责人开放</li>
-<li style="list-style: none"><input type="checkbox"> 数据库敏感信息，如用户手机号，商户信息等持久化和反序列化采用AES等相关加密算法进行处理</li>
-<li style="list-style: none"><input type="checkbox"> 数据库性能指标TPS,要根据相关业务和用户使用量，进行设计和规划基准测试，比如用sysbench分别进行cpu的基准测试和i/o的基准测试，有条件的话，可以拿dump生产环境进行压力测试</li>
-<li style="list-style: none"><input type="checkbox"> 数据库sql语句使用要避免可以进行sql注入攻击的拼写方法</li>
-<li style="list-style: none"><input type="checkbox"> 数据库关键信息，要分别支持冷备和热备</li>
-</ul>
-<h2 id="应用服务和负载均衡"><a href="#应用服务和负载均衡" class="headerlink" title="应用服务和负载均衡"></a>应用服务和负载均衡</h2><ul>
-<li style="list-style: none"><input type="checkbox"> Https支持</li>
-<li style="list-style: none"><input type="checkbox"> 如果是平台接入，iptables要设置访问白名单</li>
-<li style="list-style: none"><input type="checkbox"> 应用服务部署单独分配部署帐号，不采用root用户</li>
-<li style="list-style: none"><input type="checkbox"> 核心应用服务尽量和其他应用服务分离</li>
-<li style="list-style: none"><input type="checkbox"> 请求和返回进行加签和验签处理</li>
-<li style="list-style: none"><input type="checkbox"> 某些业务请求要保证幂等性（分布式锁，或者数据库支持等）</li>
-<li style="list-style: none"><input type="checkbox"> 后台应用服务，进行严格权限管理</li>
-<li style="list-style: none"><input type="checkbox"> 防止频繁相同请求恶意攻击（例如，可以简单的过滤器实现）</li>
-<li style="list-style: none"><input type="checkbox"> 后台管理页面要防止js注入，中间人劫持等攻击</li>
-<li style="list-style: none"><input type="checkbox"> 进行模拟ddos攻击测试</li>
-<li style="list-style: none"><input type="checkbox"> 应用日志要严格控制敏感信息和日志等级处理</li>
-</ul>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
-<li style="list-style: none"><input type="checkbox"> 保证高可用，无论存储服务，应用服务，负载分发服务一定要保证多节点部署</li>
-<li style="list-style: none"><input type="checkbox"> 保证高并发，无论存储服务，应用服务，负载分发服务一定要保证容易水平扩展</li>
-<li style="list-style: none"><input type="checkbox"> 保证网络稳定性，做好多运营商节点部署功能</li>
-<li style="list-style: none"><input type="checkbox"> 支持热部署，及灰度发布</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/13/kownledge/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="彧衡">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuHeng">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/13/kownledge/" itemprop="url">知识点</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-13T15:22:10+08:00">
-                2018-05-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/经验/" itemprop="url" rel="index">
-                    <span itemprop="name">经验</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  108
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="mac-拼音选择框不见？"><a href="#mac-拼音选择框不见？" class="headerlink" title="mac 拼音选择框不见？"></a>mac 拼音选择框不见？</h1><p>打开 Terminal （命令行），输入下面，回车即可。 </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkill -f SCIM.app</span><br></pre></td></tr></table></figure>
-<h1 id="Linux-下Tomcat-deploy-阻塞在INFO-Deploying-web-application-directory-…"><a href="#Linux-下Tomcat-deploy-阻塞在INFO-Deploying-web-application-directory-…" class="headerlink" title="Linux 下Tomcat deploy 阻塞在INFO: Deploying web application directory ….?"></a>Linux 下Tomcat deploy 阻塞在INFO: Deploying web application directory ….?</h1><p>linux 或者部分unix系统提供随机数设备是/dev/random和/dev/urandom，两个区别是，random安全性高，</p>
-<p>生成随机数时间间隔有点长，jdk默认random.</p>
-<p>修改$JAVA_HOME/jre/lib/security/java.security文件，替换securerandom.source=file:/dev/random/为secureradom.source=file:/dev/./urandom    </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/hexo_1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="彧衡">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuHeng">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/10/hexo_1/" itemprop="url">Hexo搭建全教程（一）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-10T22:10:34+08:00">
-                2018-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/经验/" itemprop="url" rel="index">
-                    <span itemprop="name">经验</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  116
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
-<p>心血来潮，搭建个博客玩玩，看了网上很多教程，有些很全面，我也是参照大家的基本一气呵成，呈现给大家现在的这个样子，但是迫于好奇心，总想知道那些奇奇怪怪的命令到底是什么？于是有了本系列教程的第一部分。 </p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/10/hexo_1/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2208,7 +2148,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2337,7 +2277,7 @@
 </div>
 <div class="theme-info">
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共18.7k字</span>
+  <span class="post-count">博客全站共20.6k字</span>
 </div>
 
 
